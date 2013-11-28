@@ -1,24 +1,45 @@
 package org.akomantoso;
 
+import java.io.File;
 import junit.framework.TestCase;
 
 /**
- * org.akomantoso
- * User: ashok
- * Date: 11/26/13
- * Time: 5:21 PM
+ *
+ * @author ashok
  */
 public class AnValidatorTest extends TestCase {
-    public void setUp() throws Exception {
+    
+    AnVersion _version = new AnVersion("3.0", "CSD06");
+    File _validate  = new File("../../testdocs/akomantoso_doc.xml");        
+    AnValidator _validator = new AnValidator();
+    
+    public AnValidatorTest(String testName) {
+        super(testName);
+        
+    }
+    
+    @Override
+    protected void setUp() throws Exception {
         super.setUp();
-
+        if (_validate.exists()) {
+            fail("Test file does not exist");
+        }
+                
+    }
+    
+    @Override
+    protected void tearDown() throws Exception {
+        super.tearDown();
     }
 
-    public void tearDown() throws Exception {
-
-    }
-
+    /**
+     * Test of validate method, of class AnValidator.
+     */
     public void testValidate() throws Exception {
-
+        System.out.println("validate");
+        AnValidatorError result = _validator.validate(_version, _validate);
+        //assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 }

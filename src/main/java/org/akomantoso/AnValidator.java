@@ -8,10 +8,9 @@ package org.akomantoso;
  *
  */
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.xml.sax.SAXException;
-import org.xml.sax.SAXParseException;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 
 import javax.xml.XMLConstants;
 import javax.xml.transform.Source;
@@ -19,9 +18,12 @@ import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
+import org.akomantoso.impl.PackageResourceResolver;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.xml.sax.SAXException;
+import org.xml.sax.SAXParseException;
 
 
 public class AnValidator {
@@ -30,19 +32,29 @@ public class AnValidator {
     public AnValidator() {
     }
 
-    public AnValidatorError validate(URL schemaFile, File ftoValidate) throws SAXException {
+    public AnValidatorError validate(AnVersion version, File ftoValidate) throws SAXException {
+
         AnValidatorError err = new AnValidatorError();
-        Source validateThisFile = new StreamSource(ftoValidate);
-        SchemaFactory schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI);
-        final Schema schema = schemaFactory.newSchema(schemaFile);
+        Source schemaSource = new StreamSource(version.getSchemaForVersion());
+        Source fileSource = new StreamSource(ftoValidate);
+        SchemaFactory schemaFactory = SchemaFactory.newInstance(
+                XMLConstants.W3C_XML_SCHEMA_NS_URI
+                );
+        // to resolve things like xml.xsd
+        schemaFactory.setResourceResolver(new PackageResourceResolver());
+        final Schema schema = schemaFactory.newSchema(schemaSource);
         final Validator validator = schema.newValidator();
         try {
-            validator.validate(validateThisFile);
+            validator.validate(fileSource);
         } catch (IOException e) {
             logger.error("IO error during validation", e);
             err = new AnValidatorError(e);
             return err;
         } catch (SAXParseException e) {
+            logger.error("Sax Parse error Validation", e);
+            err = new AnValidatorError(e);
+            return err;
+        } catch (SAXException e) {
             logger.error("Sax Parse error Validation", e);
             err = new AnValidatorError(e);
             return err;

@@ -5,180 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="462936a1-e75e-4e9c-b6f6-210d453d7431" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/akomantoso/AnValidatorTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LICENSE.txt" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/org/oasis_open/AppTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/A.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/A.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/AffectedDocument.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/AffectedDocument.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/AkomaNtosoType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/AkomaNtosoType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Althierarchy.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Althierarchy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/AmendmentBodyType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/AmendmentBodyType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/AmendmentStructure.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/AmendmentStructure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Amendments.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Amendments.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Analysis.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Analysis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/AnyOtherType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/AnyOtherType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ArgumentType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ArgumentType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/AttachmentOf.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/AttachmentOf.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Attachments.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Attachments.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/AuthorialNote.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/AuthorialNote.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Basehierarchy.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Basehierarchy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Basicopt.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Basicopt.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Block.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Block.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/BlockContainerType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/BlockContainerType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/BlockList.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/BlockList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Blocksopt.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Blocksopt.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Blocksreq.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Blocksreq.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/BodyType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/BodyType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/BooleanValueType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/BooleanValueType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/CitationHierarchy.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/CitationHierarchy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Classification.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Classification.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/CollectionBodyType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/CollectionBodyType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/CollectionStructure.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/CollectionStructure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ComplexTypeInline.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ComplexTypeInline.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Component.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Component.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ComponentData.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ComponentData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ComponentInfo.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ComponentInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Components.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Components.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Condition.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Condition.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ContainerType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ContainerType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/CoreProperties.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/CoreProperties.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/CountType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/CountType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Date.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Date.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/DebateBodyType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/DebateBodyType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/DebateSection.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/DebateSection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/DebateStructure.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/DebateStructure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/DocCommittee.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/DocCommittee.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/DocDate.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/DocDate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/DocProponent.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/DocProponent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/EfficacyMod.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/EfficacyMod.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/EfficacyMods.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/EfficacyMods.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ElementInline.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ElementInline.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Entity.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Entity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/EolType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/EolType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/EventRef.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/EventRef.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/EventType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/EventType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ExtractStructure.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ExtractStructure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ExtractText.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ExtractText.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/FRBRExpression.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/FRBRExpression.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/FRBRManifestation.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/FRBRManifestation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/FRBRWork.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/FRBRWork.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/FRBRalias.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/FRBRalias.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/FRBRauthor.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/FRBRauthor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/FRBRdate.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/FRBRdate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/FRBRlanguage.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/FRBRlanguage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/FRBRtranslation.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/FRBRtranslation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/FillIn.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/FillIn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ForceMod.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ForceMod.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ForceMods.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ForceMods.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Formula.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Formula.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/FragmentBodyType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/FragmentBodyType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/FragmentStructure.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/FragmentStructure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/HasAttachment.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/HasAttachment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Hcontainer.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Hcontainer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/HierarchicalStructure.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/HierarchicalStructure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Hierarchy.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Hierarchy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Identification.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Identification.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Img.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Img.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Inlinereq.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Inlinereq.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Inlinereqreq.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Inlinereqreq.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ItemType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ItemType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Judge.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Judge.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/JudgmentBodyType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/JudgmentBodyType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/JudgmentStructure.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/JudgmentStructure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/JudicialArgumentType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/JudicialArgumentType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/JudicialArguments.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/JudicialArguments.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Keyword.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Keyword.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Lawyer.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Lawyer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/LegalSystemMod.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/LegalSystemMod.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/LegalSystemMods.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/LegalSystemMods.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Legislature.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Legislature.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Li.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Li.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Lifecycle.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Lifecycle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/LinkType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/LinkType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ListItems.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ListItems.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Maincontent.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Maincontent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Marker.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Marker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Markeropt.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Markeropt.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Markerreq.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Markerreq.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/MeaningMod.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/MeaningMod.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/MeaningMods.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/MeaningMods.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Meta.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Meta.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Metaopt.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Metaopt.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Metareq.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Metareq.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ModType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ModType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ModificationType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ModificationType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/NoteRef.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/NoteRef.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Notes.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Notes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ObjectFactory.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ObjectFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/OpenStructure.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/OpenStructure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Opinion.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Opinion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/OpinionType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/OpinionType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/OtherAnalysis.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/OtherAnalysis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ParliamentaryAnalysis.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ParliamentaryAnalysis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ParliamentaryAnalysisType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ParliamentaryAnalysisType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Party.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Party.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/PeriodType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/PeriodType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Person.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Person.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Placeholder.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Placeholder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/PlacementType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/PlacementType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/PosType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/PosType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Preambleopt.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Preambleopt.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Prefaceopt.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Prefaceopt.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Presentation.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Presentation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Proprietary.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Proprietary.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Publication.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Publication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Quantity.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Quantity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/QuotedStructure.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/QuotedStructure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/QuotedText.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/QuotedText.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/RecitalHierarchy.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/RecitalHierarchy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/RecordedTime.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/RecordedTime.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Ref.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Ref.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/RefItems.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/RefItems.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ReferenceType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ReferenceType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/RelatedDocument.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/RelatedDocument.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Remark.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Remark.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/RemarkType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/RemarkType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/RenumberingInfo.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/RenumberingInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Result.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Result.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ResultType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ResultType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Rmod.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Rmod.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Rref.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Rref.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ScopeMod.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ScopeMod.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ScopeMods.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ScopeMods.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Session.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Session.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/SpeechGroup.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/SpeechGroup.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/SpeechType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/SpeechType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/SrcType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/SrcType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/StatusType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/StatusType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Step.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Step.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/SubFlowStructure.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/SubFlowStructure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/TLCReference.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/TLCReference.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Table.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Table.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Td.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Td.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/TemporalData.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/TemporalData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/TemporalGroup.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/TemporalGroup.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/TextualMod.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/TextualMod.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/TextualMods.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/TextualMods.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Th.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Th.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Time.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Time.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/TimeInterval.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/TimeInterval.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/TimeType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/TimeType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Toc.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Toc.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/TocItem.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/TocItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Tr.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Tr.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ValueType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/ValueType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/VersionType.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/VersionType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Vote.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Vote.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Workflow.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/Workflow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/akomantoso-lib.iml" afterPath="$PROJECT_DIR$/akomantoso-lib.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/akomantoso-lib.ipr" afterPath="$PROJECT_DIR$/akomantoso-lib.ipr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/akomantoso/AnValidatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/akomantoso/AnValidatorTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/akomantoso-lib.iws" afterPath="$PROJECT_DIR$/akomantoso-lib.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/package-info.java" afterPath="$PROJECT_DIR$/src/main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="akomantoso-lib.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="462936a1-e75e-4e9c-b6f6-210d453d7431" time="1385563740547" ignored="false" />
+    <file path="/Dummy.txt" changelist="462936a1-e75e-4e9c-b6f6-210d453d7431" time="1385582263451" ignored="false" />
     <file path="/Validator.java" changelist="462936a1-e75e-4e9c-b6f6-210d453d7431" time="1385460533054" ignored="false" />
     <file path="/fragment.java" changelist="462936a1-e75e-4e9c-b6f6-210d453d7431" time="1385475698322" ignored="false" />
     <file path="/AnValidator.java" changelist="462936a1-e75e-4e9c-b6f6-210d453d7431" time="1385466754079" ignored="false" />
@@ -187,6 +19,7 @@
     <file path="/File Header.txt.ft" changelist="462936a1-e75e-4e9c-b6f6-210d453d7431" time="1385466888930" ignored="false" />
     <file path="/AnVersion.java" changelist="462936a1-e75e-4e9c-b6f6-210d453d7431" time="1385468437337" ignored="false" />
     <file path="/AnValidatorTest.java" changelist="462936a1-e75e-4e9c-b6f6-210d453d7431" time="1385475732186" ignored="false" />
+    <file path="/AnTest.java" changelist="462936a1-e75e-4e9c-b6f6-210d453d7431" time="1385583953659" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,10 +91,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AnValidatorTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AnTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/akomantoso/AnTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="68" selection-start="424" selection-end="424" vertical-scroll-proportion="0.41428572">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnValidatorTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/org/akomantoso/AnValidatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="27" selection-start="113" selection-end="113" vertical-scroll-proportion="0.3343949">
+            <state line="10" column="13" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="21" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -322,6 +175,7 @@
         <option value="$PROJECT_DIR$/src/main/java/org/akomantoso/AnVersion.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/akomantoso/AnValidator.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/akomantoso/AnValidatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/akomantoso/AnTest.java" />
       </list>
     </option>
   </component>
@@ -357,6 +211,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -397,15 +252,149 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="akomantoso-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="akomantoso-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="akomantoso-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="akomantoso-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oasis_open" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="akomantoso-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="akomantoso-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oasis_open" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="csd06" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="akomantoso-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="akomantoso-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="akomantoso" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="akomantoso-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="akomantoso-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
     <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="fileTemplates" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -415,8 +404,9 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
@@ -429,7 +419,29 @@
       <recent name="org.akomantoso" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.AnTest">
+    <configuration default="false" name="AnTest" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.akomantoso.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="org.akomantoso.AnTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="akomantoso-lib" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -442,6 +454,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -470,19 +495,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -521,7 +533,14 @@
       <patterns />
       <method />
     </configuration>
-    <list size="0" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Application.AnTest" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.AnTest" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -564,23 +583,23 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3203252" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40715373" sideWeight="0.6" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40715373" sideWeight="0.6796748" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3203252" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -649,27 +668,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/generator/_3_0/csd06/akomantoso30.xjb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="4" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/akomantoso/AnValidatorError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="47" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -711,23 +709,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="21" selection-start="1115" selection-end="1115" vertical-scroll-proportion="1.5946844">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/akomantoso/AnVersion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="11" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/akomantoso/AnValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="38" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -742,10 +726,47 @@
         <state line="4" column="54" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/akomantoso-lib.iws">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="21" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/akomantoso/AnValidatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="27" selection-start="113" selection-end="113" vertical-scroll-proportion="0.3343949">
+        <state line="10" column="13" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/akomantoso/AnValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="38" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/java/io/Reader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="0" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.33240223">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/akomantoso/AnTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="68" selection-start="424" selection-end="424" vertical-scroll-proportion="0.41428572">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

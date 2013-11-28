@@ -3,6 +3,7 @@ package org.akomantoso;
 import org.xml.sax.SAXParseException;
 
 import java.io.IOException;
+import org.xml.sax.SAXException;
 
 /**
  *
@@ -38,6 +39,13 @@ public class AnValidatorError {
         message = e.getLocalizedMessage();
         stackTraceMsg = getStackTraceStr(e.getStackTrace());
     }
+    
+    public AnValidatorError(SAXException e){
+        isError = true;
+        message = e.getLocalizedMessage();
+        stackTraceMsg = getStackTraceStr(e.getStackTrace());
+    }
+
 
     private String getStackTraceStr(StackTraceElement[] elems){
         StringBuilder sttMsg = new StringBuilder();
