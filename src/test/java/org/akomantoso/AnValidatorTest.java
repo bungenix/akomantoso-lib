@@ -6,26 +6,23 @@ import junit.framework.TestCase;
 
 /**
  *
- * @author ashok
+ * @author Ashok Hariharan
  */
 public class AnValidatorTest extends TestCase {
     
     AnVersion _version = new AnVersion("3.0", "CSD06");
-    File _validate  = new File("src/test/java/testdocs/akomantoso_doc.xml");    
+    // test file
+    File _validate  = new File("./src/test/java/testdocs/akomantoso_doc.xml");    
     AnValidator _validator = new AnValidator();
     
     public AnValidatorTest(String testName) throws IOException {
         super(testName);
-        System.out.println(_validate.getCanonicalPath());
+        System.out.println("CANONICAL PATH = " + _validate.getCanonicalPath());
     }
     
     @Override
     protected void setUp() throws Exception {
         super.setUp();
-        if (_validate.exists()) {
-            fail("Test file does not exist");
-        }
-                
     }
     
     @Override
