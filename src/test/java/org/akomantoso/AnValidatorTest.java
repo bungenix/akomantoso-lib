@@ -11,13 +11,15 @@ import junit.framework.TestCase;
 public class AnValidatorTest extends TestCase {
     
     AnVersion _version = new AnVersion("3.0", "CSD06");
-    // test file
-    File _validate  = new File("./src/test/java/testdocs/akomantoso_doc.xml");    
+    // test file 1 - this should validte
+    File _validate1  = new File("./src/test/java/testdocs/akomantoso_doc.xml");    
+    // test file 2 - this should fail 
+    File _validate2  = new File("./src/test/java/testdocs/akomantoso_act.xml");    
+    
     AnValidator _validator = new AnValidator();
     
     public AnValidatorTest(String testName) throws IOException {
         super(testName);
-        System.out.println("CANONICAL PATH = " + _validate.getCanonicalPath());
     }
     
     @Override
@@ -35,9 +37,15 @@ public class AnValidatorTest extends TestCase {
      */
     public void testValidate() throws Exception {
         System.out.println("validate");
-        AnValidatorError result = _validator.validate(_version, _validate);
-        //assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        // file 1 should validate
+        AnValidatorError result = _validator.validate(_version, _validate1);
+        assertEquals(result.isError(), false);
+        // file 2 should fail
+        result = _validator.validate(_version, _validate2);
+        assertEquals(result.isError(), true);
+        System.out.println("error details : ");
+        System.out.println(" line : " + result.getLineNumber() + ", "
+                + "col : " + result.getColumnNumber());
+        
     }
 }

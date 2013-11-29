@@ -1,9 +1,8 @@
 package org.akomantoso;
 
-import org.xml.sax.SAXParseException;
-
 import java.io.IOException;
 import org.xml.sax.SAXException;
+import org.xml.sax.SAXParseException;
 
 /**
  *
@@ -73,5 +72,9 @@ public class AnValidatorError {
 
     public String getStackTraceMsg() {
         return stackTraceMsg;
+    }
+    
+    public boolean isError(){
+        return this.isError;
     }
 }
