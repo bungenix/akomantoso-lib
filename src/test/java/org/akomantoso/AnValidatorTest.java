@@ -1,6 +1,7 @@
 package org.akomantoso;
 
 import java.io.File;
+import java.io.IOException;
 import junit.framework.TestCase;
 
 /**
@@ -10,12 +11,12 @@ import junit.framework.TestCase;
 public class AnValidatorTest extends TestCase {
     
     AnVersion _version = new AnVersion("3.0", "CSD06");
-    File _validate  = new File("../../testdocs/akomantoso_doc.xml");        
+    File _validate  = new File("src/test/java/testdocs/akomantoso_doc.xml");    
     AnValidator _validator = new AnValidator();
     
-    public AnValidatorTest(String testName) {
+    public AnValidatorTest(String testName) throws IOException {
         super(testName);
-        
+        System.out.println(_validate.getCanonicalPath());
     }
     
     @Override

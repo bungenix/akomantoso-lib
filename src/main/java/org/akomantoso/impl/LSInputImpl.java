@@ -72,7 +72,7 @@ public class LSInputImpl implements LSInput {
 
     @Override
     public String getBaseURI() {
-        return this.getBaseURI();
+        return this.baseUri;
     }
 
     @Override

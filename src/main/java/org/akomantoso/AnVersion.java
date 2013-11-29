@@ -1,5 +1,6 @@
 package org.akomantoso;
 
+import java.io.IOException;
 import java.io.InputStream;
 
 /**
@@ -33,7 +34,12 @@ public class AnVersion {
         sb.append("/").append(prefix.replace(".", "/")).
                 append(this.majorVersionPath()).
                     append("/").append(minorVersion).append("/").append(anxsd);
-        InputStream in = AnVersion.class.getResourceAsStream(sb.toString());
+        InputStream in = getClass().getResourceAsStream(
+                sb.toString().trim()
+                );
+        if (in == null) {
+            System.out.println("inputstream is null !! "+ sb.toString());
+        }
         return in;
     }
     
@@ -44,5 +50,10 @@ public class AnVersion {
     private String versionPath() {
         return majorVersionPath() + "/" + minorVersion;
     }
+    
+    public static void main(String[] args) throws IOException{
+        InputStream is = AnVersion.class.getResourceAsStream("/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/akomantoso30.xsd");
+        System.out.println(is.available());
+    }  
 
 }
