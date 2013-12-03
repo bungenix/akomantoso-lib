@@ -1,4 +1,3 @@
-
 package org.akomantoso.impl;
 
 import java.io.InputStream;

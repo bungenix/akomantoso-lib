@@ -7,3 +7,5 @@
 
 @javax.xml.bind.annotation.XmlSchema(namespace = "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD06", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
 package org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06;
+import javax.xml.bind.annotation.*;
+

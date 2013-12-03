@@ -6,7 +6,8 @@ import org.w3c.dom.ls.LSInput;
 import org.w3c.dom.ls.LSResourceResolver;
 
 /**
- *
+ * Stream the required / imported dtd and schemas via a Resource Resolver
+ * Otherwise it may require a internet lookup for these resources
  * @author ashok
  */
 public class PackageResourceResolver implements LSResourceResolver {

@@ -5,7 +5,8 @@ import java.io.IOException;
 import junit.framework.TestCase;
 
 /**
- *
+ * Test the validation of Akoma Ntoso documents, returns line number
+   and column number when validation files
  * @author Ashok Hariharan
  */
 public class AnValidatorTest extends TestCase {
@@ -39,13 +40,16 @@ public class AnValidatorTest extends TestCase {
         System.out.println("validate");
         // file 1 should validate
         AnValidatorError result = _validator.validate(_version, _validate1);
-        assertEquals(result.isError(), false);
+        assertEquals("Validation of file failed when it should have succeeded", 
+                result.isError(), false);
         // file 2 should fail
         result = _validator.validate(_version, _validate2);
-        assertEquals(result.isError(), true);
+        assertEquals("Validation of file succeeded when it should have failed",
+                result.isError(), true);
         System.out.println("error details : ");
         System.out.println(" line : " + result.getLineNumber() + ", "
                 + "col : " + result.getColumnNumber());
-        
+        assertEquals("line number should be 209 !", result.getLineNumber(), (Integer)209);
+        assertEquals("col number should be 131 !", result.getColumnNumber(), (Integer)131);
     }
 }
