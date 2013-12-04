@@ -36,7 +36,7 @@
 <h3>
 <a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies</h3>
 
-<p>The only dependency is <a href="http://www.sl4j.org">sl4j</a> </p>
+<p>The only dependency is <a href="http://www.sl4j.org">sl4j</a> the logging facade library</p>
 
 <h3>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
@@ -44,7 +44,7 @@
 <h2>
 <a name="loading-an-xml-document" class="anchor" href="#loading-an-xml-document"><span class="octicon octicon-link"></span></a>Loading an XML document</h2>
 
-<p>The following </p>
+<p>The following loads an Akoma Ntoso document, and makes it accessible as a Java object: </p>
 
 <div class="highlight highlight-java"><pre><span class="c1">// load the context for the specific AKoma Ntoso version you want to use, here we</span>
 <span class="c1">// use the 3.0-csd06 version</span>
@@ -53,7 +53,8 @@
 <span class="n">JAXBContext</span> <span class="n">jc</span> <span class="o">=</span> 
     <span class="n">JAXBContext</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="s">"org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06"</span><span class="o">);</span>
 <span class="n">Unmarshaller</span> <span class="n">unmarshaller</span> <span class="o">=</span> <span class="n">jc</span><span class="o">.</span><span class="na">createUnmarshaller</span><span class="o">();</span>
-<span class="n">JAXBElement</span><span class="o">&lt;</span><span class="n">AkomaNtosoType</span><span class="o">&gt;</span> <span class="n">anType</span> <span class="o">=</span> <span class="o">(</span><span class="n">JAXBElement</span><span class="o">&lt;</span><span class="n">AkomaNtosoType</span><span class="o">&gt;)</span><span class="n">unmarshaller</span><span class="o">.</span><span class="na">unmarshal</span><span class="o">(</span><span class="n">_anDoc</span><span class="o">);</span>
+<span class="n">JAXBElement</span><span class="o">&lt;</span><span class="n">AkomaNtosoType</span><span class="o">&gt;</span> <span class="n">anType</span> <span class="o">=</span> 
+    <span class="o">(</span><span class="n">JAXBElement</span><span class="o">&lt;</span><span class="n">AkomaNtosoType</span><span class="o">&gt;)</span><span class="n">unmarshaller</span><span class="o">.</span><span class="na">unmarshal</span><span class="o">(</span><span class="n">_anDoc</span><span class="o">);</span>
 <span class="n">AkomaNtosoType</span> <span class="n">anDoc</span>  <span class="o">=</span> <span class="n">anType</span><span class="o">.</span><span class="na">getValue</span><span class="o">();</span>
 <span class="n">String</span> <span class="n">aName</span> <span class="o">=</span> <span class="n">anDoc</span><span class="o">.</span><span class="na">getDoc</span><span class="o">().</span><span class="na">getName</span><span class="o">();</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">" doc name = "</span> <span class="o">+</span> <span class="n">aName</span><span class="o">);</span>
