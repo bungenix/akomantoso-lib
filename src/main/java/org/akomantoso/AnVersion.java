@@ -1,16 +1,19 @@
 package org.akomantoso;
 
-import java.io.IOException;
 import java.io.InputStream;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * org.akomantoso
- * User: ashok
+ * Loads a specific version of the AN schema
+ * User: Ashok Hariharan
  * Date: 11/26/13
  * Time: 3:01 PM
  */
 public class AnVersion {
     
+    Logger logger = LoggerFactory.getLogger(AnValidator.class);
+
     String majorVersion;
     String minorVersion;
     
@@ -27,9 +30,12 @@ public class AnVersion {
        this.majorVersion = majorVersion;
        this.minorVersion = minorVersion.toLowerCase();
     }
-    
+
+    /**
+     * Returns the schema xsd as a stream from within the package
+     * @return 
+     */
     public InputStream getSchemaForVersion(){
-        
         StringBuilder sb = new StringBuilder();
         sb.append("/").append(prefix.replace(".", "/")).
                 append(this.majorVersionPath()).
@@ -38,7 +44,7 @@ public class AnVersion {
                 sb.toString().trim()
                 );
         if (in == null) {
-            System.out.println("inputstream is null !! "+ sb.toString());
+            logger.error("inputstream is null !! "+ sb.toString());
         }
         return in;
     }
@@ -50,10 +56,5 @@ public class AnVersion {
     private String versionPath() {
         return majorVersionPath() + "/" + minorVersion;
     }
-    
-    public static void main(String[] args) throws IOException{
-        InputStream is = AnVersion.class.getResourceAsStream("/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/akomantoso30.xsd");
-        System.out.println(is.available());
-    }  
 
 }

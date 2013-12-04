@@ -6,7 +6,7 @@ import org.w3c.dom.ls.LSInput;
 
 /**
  *
- * @author ashok
+ * @author Ashok Hariharan
  */
 public class LSInputImpl implements LSInput {
 

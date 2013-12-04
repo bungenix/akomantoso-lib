@@ -20,7 +20,7 @@ import org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06.VersionType;
 
 /**
  * Test marshalling and unmarshalling of xml files 
- * @author ashok
+ * @author Ashok Hariharan
  */
 public class AnUnmarshallAndMarshall extends TestCase {
 
@@ -58,6 +58,10 @@ public class AnUnmarshallAndMarshall extends TestCase {
                 vType.value(), "originalVersion");
    }
    
+    /**
+     * This test always passes, it demonstrates marshalling an Akoma Ntoso document
+     * @throws JAXBException 
+     */
    public void testMarshall() throws JAXBException{
         JAXBContext jc = 
             JAXBContext.newInstance("org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06");

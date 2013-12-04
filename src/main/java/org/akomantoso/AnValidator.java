@@ -2,7 +2,7 @@ package org.akomantoso;
 
 /**
  *
- * User: ashok
+ * User: Ashok Hariharan
  * Date: 11/25/13
  * Time: 2:08 PM
  *
@@ -10,8 +10,6 @@ package org.akomantoso;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
-
 import javax.xml.XMLConstants;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
@@ -19,7 +17,6 @@ import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
 import org.akomantoso.impl.PackageResourceResolver;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
