@@ -42,8 +42,9 @@ public class AnUnmarshallAndMarshall extends TestCase {
     }
 
     public void testUnmarshall() throws JAXBException{
-        JAXBContext jc = 
-            JAXBContext.newInstance("org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06");
+        
+        AnVersion version = new AnVersion("3.0", "CSD06");
+        JAXBContext jc = version.getContext();
         Unmarshaller unmarshaller = jc.createUnmarshaller();
         JAXBElement<AkomaNtosoType> anType = (JAXBElement<AkomaNtosoType>)unmarshaller.unmarshal(_anDoc);
         AkomaNtosoType anDoc  = anType.getValue();
@@ -63,8 +64,8 @@ public class AnUnmarshallAndMarshall extends TestCase {
      * @throws JAXBException 
      */
    public void testMarshall() throws JAXBException{
-        JAXBContext jc = 
-            JAXBContext.newInstance("org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06");
+        AnVersion ver = new AnVersion("3.0", "CSD06");
+        JAXBContext jc = ver.getContext();
         Marshaller marshaller = jc.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, 
                 true);

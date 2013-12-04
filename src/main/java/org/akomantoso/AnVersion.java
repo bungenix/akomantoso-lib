@@ -1,6 +1,8 @@
 package org.akomantoso;
 
 import java.io.InputStream;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,6 +33,27 @@ public class AnVersion {
        this.minorVersion = minorVersion.toLowerCase();
     }
 
+    /**
+     * Get package URN for specific AN version
+     * @return 
+     */
+    public String getPackageForVersion(){
+        return prefix.concat("_").
+                concat(majorVersion.replace(".", "_")).
+                    concat(".").concat(minorVersion);
+    }
+    
+    /**
+     * Returns a new JAXBContext handle for the specific Akoma Ntoso package
+     * version
+     * @return
+     * @throws JAXBException 
+     */
+    public JAXBContext getContext() throws JAXBException{
+        String sPackage = getPackageForVersion();
+        return JAXBContext.newInstance(sPackage);
+    }
+    
     /**
      * Returns the schema xsd as a stream from within the package
      * @return 
