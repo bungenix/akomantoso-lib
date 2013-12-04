@@ -6,7 +6,7 @@ import junit.framework.TestCase;
 
 /**
  * Test the validation of Akoma Ntoso documents, returns line number
-   and column number when validation files
+   and column number when validation fails
  * @author Ashok Hariharan
  */
 public class AnValidatorTest extends TestCase {
@@ -42,7 +42,7 @@ public class AnValidatorTest extends TestCase {
         AnValidatorError result = _validator.validate(_version, _validate1);
         assertEquals("Validation of file failed when it should have succeeded", 
                 result.isError(), false);
-        // file 2 should fail
+        // file 2 should fail, but failure should match specific line and col number
         result = _validator.validate(_version, _validate2);
         assertEquals("Validation of file succeeded when it should have failed",
                 result.isError(), true);

@@ -4,9 +4,17 @@ import java.io.File;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import junit.framework.TestCase;
 import org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06.AkomaNtosoType;
+import org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06.FRBRWork;
+import org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06.Identification;
+import org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06.Meta;
+import org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06.ObjectFactory;
+import org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06.OpenStructure;
+import org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06.Publication;
+import org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06.ValueType;
 import org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06.VersionType;
 
 
@@ -49,6 +57,55 @@ public class AnUnmarshallAndMarshall extends TestCase {
         assertEquals("contains should be 'originalVersion'", 
                 vType.value(), "originalVersion");
    }
-    
+   
+   public void testMarshall() throws JAXBException{
+        JAXBContext jc = 
+            JAXBContext.newInstance("org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06");
+        Marshaller marshaller = jc.createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, 
+                true);
+        
+        // create the root akomaNtoso element
+        ObjectFactory of = new ObjectFactory();
+        AkomaNtosoType anType = new AkomaNtosoType();
+        OpenStructure ost = new OpenStructure();
+        ost.setName("test_doc");
+        ost.setContains(VersionType.SINGLE_VERSION);
+        
+        // create the meta element
+        Meta meta = new Meta();
+        // create the publication tag
+        Publication pub = new Publication();
+        pub.setCurrentId("test_pub");
+        pub.setName("pub");
+        pub.setDate("2013-01-01");
+        pub.setNumber("42");
+        // add the publication element to the meta element
+        meta.setPublication(pub);
+        //create the identification element
+        Identification idf = new Identification();
+        idf.setSource("#a_source");
+        //create a work element
+        FRBRWork work = of.createFRBRWork();
+        //set FRBRthis on work
+        ValueType vThis = new ValueType();
+        vThis.setValue("/ak/bill/2013-01-01/A1/memorandum");
+        work.setFRBRthis(vThis);
+        //set FRBRuri on work
+        ValueType vURI = new ValueType();
+        vURI.setValue("/ak/bill/2013-01-01/A1");
+        work.getFRBRuri().add(vURI);
+        //add the identification to the work
+        idf.setFRBRWork(work);
+        //add the identifcatin on the meta
+        meta.setIdentification(idf);
+        //add the meta 
+        ost.setMeta(meta);
+        //add the doc type to the akomaNtoso element
+        anType.setDoc(ost);
+        JAXBElement<AkomaNtosoType> rootElem = of.createAkomaNtoso(anType);
+        marshaller.marshal(rootElem, System.out);
+        assertEquals(true, true);
+   }
     
 }
