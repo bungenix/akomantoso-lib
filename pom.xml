@@ -4,7 +4,7 @@
   <groupId>org.oasis_open</groupId>
   <artifactId>akomantoso-lib</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <name>akomantoso-lib</name>
   <url>http://maven.apache.org</url>
   <properties>
