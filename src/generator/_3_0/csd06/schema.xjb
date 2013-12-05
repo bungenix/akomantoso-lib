@@ -2,7 +2,7 @@
     xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="1.0"
     xmlns:xjc= "http://java.sun.com/xml/ns/jaxb/xjc" jaxb:extensionBindingPrefixes="xjc"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    schemaLocation="akomantoso30.xsd">
+    schemaLocation="schema.xsd">
     <jaxb:globalBindings generateMixedExtensions="true"/>
 
     <!-- rename the value element -->

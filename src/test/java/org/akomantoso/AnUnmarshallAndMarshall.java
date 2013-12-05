@@ -42,7 +42,7 @@ public class AnUnmarshallAndMarshall extends TestCase {
         super.tearDown();
     }
 
-    public void testUnmarshall() throws JAXBException{
+    public void testUnmarshall_3_0() throws JAXBException{
         
         AnVersion version = new AnVersion("3.0", "CSD06");
         JAXBContext jc = version.getContext();
@@ -64,7 +64,7 @@ public class AnUnmarshallAndMarshall extends TestCase {
      * This test always passes, it demonstrates marshalling an Akoma Ntoso document
      * @throws JAXBException 
      */
-   public void testMarshall() throws JAXBException{
+   public void testMarshall_3_0() throws JAXBException{
         AnVersion ver = new AnVersion("3.0", "CSD06");
         JAXBContext jc = ver.getContext();
         Marshaller marshaller = jc.createMarshaller();
