@@ -17,9 +17,13 @@ public class AnVersion {
     
     Logger logger = LoggerFactory.getLogger(AnValidator.class);
 
-    String majorVersion;
+    Integer majorVersion;
     String minorVersion;
     
+    public final String prefix = "org.akomantoso.schema.";
+    public final String anxsd = "schema.xsd";
+
+    /**
     public class SchemaInfo{
         
         public final String prefix;
@@ -33,17 +37,18 @@ public class AnVersion {
     
     public HashMap<String, SchemaInfo> schemaInfo = new HashMap<String, SchemaInfo>(){
         {
-            put("2.0", new SchemaInfo("org.akomantoso.", "schema.xsd"));
+            put("2.0", new SchemaInfo("org.akomantoso.schema.", "schema.xsd"));
             put("3.0", new SchemaInfo("org.oasis_open.docs.legaldocml.ns.akn.", "schema.xsd"));
         }
     };
+    **/
     
     /**
      * Major and minor version of Akoma Ntoso 
      * @param majorVersion e.g. 3.0
      * @param minorVersion e.g. CSD06
      */
-    public AnVersion(String majorVersion, String minorVersion){
+    public AnVersion(Integer majorVersion, String minorVersion){
        this.majorVersion = majorVersion;
        this.minorVersion = minorVersion.toLowerCase();
     }
@@ -52,7 +57,7 @@ public class AnVersion {
      * Use this Constructor if there is no minor version
      * @param majorVersion 
      */
-    public AnVersion(String majorVersion){
+    public AnVersion(Integer majorVersion){
         this(majorVersion, null);
     }
     
@@ -61,6 +66,15 @@ public class AnVersion {
      * @return 
      */
     public String getPackageForVersion(){
+        
+        return this.prefix.
+                concat("v").concat(this.majorVersion.toString()).
+                    concat(
+                        this.minorVersion == null ?
+                        "" :
+                        "".concat(".").concat(this.minorVersion)
+                    );
+        /**
         return schemaInfo.get(majorVersion).prefix.concat("_").
                 concat(majorVersion.replace(".", "_")).
                     concat(
@@ -68,6 +82,7 @@ public class AnVersion {
                         "" : 
                         "".concat(".").concat(minorVersion)
                 );
+                */ 
     }
     
     /**
@@ -87,12 +102,10 @@ public class AnVersion {
      */
     public InputStream getSchemaForVersion(){
         StringBuilder sb = new StringBuilder();
-        SchemaInfo vInfo = schemaInfo.get(majorVersion);
-        sb.append("/").append(vInfo.prefix.replace(".", "/")).
-                append(this.majorVersionPath()).
-                    append("/").append(minorVersion).append("/").append(vInfo.anxsd);
+        String sPackage = "." + getPackageForVersion() + ".";
+        String sPathToSchema = sPackage.replace(".", "/").concat(this.anxsd);
         InputStream in = getClass().getResourceAsStream(
-                sb.toString().trim()
+                sPathToSchema
                 );
         if (in == null) {
             logger.error("inputstream is null !! "+ sb.toString());
@@ -100,12 +113,4 @@ public class AnVersion {
         return in;
     }
     
-    private String majorVersionPath(){
-        return "_" + majorVersion.replace(".", "_");
-    }
-    
-    private String versionPath() {
-        return majorVersionPath() + "/" + minorVersion;
-    }
-
 }

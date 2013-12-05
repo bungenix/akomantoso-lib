@@ -8,15 +8,15 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import junit.framework.TestCase;
-import org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06.AkomaNtosoType;
-import org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06.FRBRWork;
-import org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06.Identification;
-import org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06.Meta;
-import org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06.ObjectFactory;
-import org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06.OpenStructure;
-import org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06.Publication;
-import org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06.ValueType;
-import org.oasis_open.docs.legaldocml.ns.akn._3_0.csd06.VersionType;
+import org.akomantoso.schema.v3.csd06.AkomaNtosoType;
+import org.akomantoso.schema.v3.csd06.FRBRWork;
+import org.akomantoso.schema.v3.csd06.Identification;
+import org.akomantoso.schema.v3.csd06.Meta;
+import org.akomantoso.schema.v3.csd06.ObjectFactory;
+import org.akomantoso.schema.v3.csd06.OpenStructure;
+import org.akomantoso.schema.v3.csd06.Publication;
+import org.akomantoso.schema.v3.csd06.ValueType;
+import org.akomantoso.schema.v3.csd06.VersionType;
 
 
 /**
@@ -44,7 +44,7 @@ public class AnUnmarshallAndMarshall extends TestCase {
 
     public void testUnmarshall_3_0() throws JAXBException{
         
-        AnVersion version = new AnVersion("3.0", "CSD06");
+        AnVersion version = new AnVersion(3, "CSD06");
         JAXBContext jc = version.getContext();
         Unmarshaller unmarshaller = jc.createUnmarshaller();
         JAXBElement<AkomaNtosoType> anType = (JAXBElement<AkomaNtosoType>)unmarshaller.unmarshal(_anDoc);
@@ -65,7 +65,7 @@ public class AnUnmarshallAndMarshall extends TestCase {
      * @throws JAXBException 
      */
    public void testMarshall_3_0() throws JAXBException{
-        AnVersion ver = new AnVersion("3.0", "CSD06");
+        AnVersion ver = new AnVersion(3, "CSD06");
         JAXBContext jc = ver.getContext();
         Marshaller marshaller = jc.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, 

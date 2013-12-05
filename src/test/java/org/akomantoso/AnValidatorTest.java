@@ -14,7 +14,7 @@ import org.akomantoso.api.AnVersion;
  */
 public class AnValidatorTest extends TestCase {
     
-    AnVersion _version = new AnVersion("3.0", "CSD06");
+    AnVersion _version = new AnVersion(3, "CSD06");
     // test file 1 - this should validte
     File _validate1  = new File("./src/test/java/testdocs/akomantoso_doc.xml");    
     // test file 2 - this should fail 
