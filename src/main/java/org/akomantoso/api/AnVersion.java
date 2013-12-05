@@ -1,6 +1,7 @@
 package org.akomantoso.api;
 
 import java.io.InputStream;
+import java.util.HashMap;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import org.slf4j.Logger;
@@ -19,9 +20,23 @@ public class AnVersion {
     String majorVersion;
     String minorVersion;
     
-    public final String prefix = "org.oasis_open.docs.legaldocml.ns.akn.";
-    public final String anxsd = "akomantoso30.xsd"; 
-
+    public class SchemaInfo{
+        
+        public final String prefix;
+        public final String anxsd;
+        
+        public SchemaInfo(String prefix, String anxsd){
+            this.prefix = prefix;
+            this.anxsd = anxsd;
+        }
+    }
+    
+    public HashMap<String, SchemaInfo> schemaInfo = new HashMap<String, SchemaInfo>(){
+        {
+            put("2.0", new SchemaInfo("org.akomantoso.", "schema.xsd"));
+            put("3.0", new SchemaInfo("org.oasis_open.docs.legaldocml.ns.akn.", "schema.xsd"));
+        }
+    };
     
     /**
      * Major and minor version of Akoma Ntoso 
@@ -34,13 +49,25 @@ public class AnVersion {
     }
 
     /**
+     * Use this Constructor if there is no minor version
+     * @param majorVersion 
+     */
+    public AnVersion(String majorVersion){
+        this(majorVersion, null);
+    }
+    
+    /**
      * Get package URN for specific AN version
      * @return 
      */
     public String getPackageForVersion(){
-        return prefix.concat("_").
+        return schemaInfo.get(majorVersion).prefix.concat("_").
                 concat(majorVersion.replace(".", "_")).
-                    concat(".").concat(minorVersion);
+                    concat(
+                        minorVersion == null ? 
+                        "" : 
+                        "".concat(".").concat(minorVersion)
+                );
     }
     
     /**
@@ -60,9 +87,10 @@ public class AnVersion {
      */
     public InputStream getSchemaForVersion(){
         StringBuilder sb = new StringBuilder();
-        sb.append("/").append(prefix.replace(".", "/")).
+        SchemaInfo vInfo = schemaInfo.get(majorVersion);
+        sb.append("/").append(vInfo.prefix.replace(".", "/")).
                 append(this.majorVersionPath()).
-                    append("/").append(minorVersion).append("/").append(anxsd);
+                    append("/").append(minorVersion).append("/").append(vInfo.anxsd);
         InputStream in = getClass().getResourceAsStream(
                 sb.toString().trim()
                 );
