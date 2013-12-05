@@ -12,7 +12,8 @@ import org.w3c.dom.ls.LSResourceResolver;
  */
 public class PackageResourceResolver implements LSResourceResolver {
 
-    public static final String RESOURCE_PREFIX = "/org/akomantoso/impl";
+    public static final String RESOURCE_PREFIX = 
+            "/" + PackageResourceResolver.class.getPackage().getName().replace(".", "/");
     
     @Override
     public LSInput resolveResource(String type, String namespaceURI, String publicId, String systemId, String baseURI) {

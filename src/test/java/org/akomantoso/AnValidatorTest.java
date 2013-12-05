@@ -1,11 +1,11 @@
 package org.akomantoso;
 
-import org.akomantoso.api.AnValidatorError;
-import org.akomantoso.api.AnVersion;
-import org.akomantoso.api.AnValidator;
 import java.io.File;
 import java.io.IOException;
 import junit.framework.TestCase;
+import org.akomantoso.api.AnValidator;
+import org.akomantoso.api.AnValidatorError;
+import org.akomantoso.api.AnVersion;
 
 /**
  * Test the validation of Akoma Ntoso documents, returns line number
