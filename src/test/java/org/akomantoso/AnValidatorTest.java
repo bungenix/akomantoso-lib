@@ -1,5 +1,8 @@
 package org.akomantoso;
 
+import org.akomantoso.api.AnValidatorError;
+import org.akomantoso.api.AnVersion;
+import org.akomantoso.api.AnValidator;
 import java.io.File;
 import java.io.IOException;
 import junit.framework.TestCase;

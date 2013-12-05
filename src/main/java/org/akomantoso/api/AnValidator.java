@@ -1,4 +1,4 @@
-package org.akomantoso;
+package org.akomantoso.api;
 
 /**
  *
@@ -16,7 +16,7 @@ import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
-import org.akomantoso.impl.PackageResourceResolver;
+import org.akomantoso.api.impl.PackageResourceResolver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;

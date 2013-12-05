@@ -1,4 +1,4 @@
-package org.akomantoso.impl;
+package org.akomantoso.api.impl;
 
 import java.io.InputStream;
 import java.io.Reader;

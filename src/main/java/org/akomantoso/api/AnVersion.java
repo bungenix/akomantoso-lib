@@ -1,4 +1,4 @@
-package org.akomantoso;
+package org.akomantoso.api;
 
 import java.io.InputStream;
 import javax.xml.bind.JAXBContext;
