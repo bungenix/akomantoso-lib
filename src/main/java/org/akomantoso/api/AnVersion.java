@@ -1,5 +1,6 @@
 package org.akomantoso.api;
 
+import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.HashMap;
 import javax.xml.bind.JAXBContext;
@@ -13,7 +14,7 @@ import org.slf4j.LoggerFactory;
  * Date: 11/26/13
  * Time: 3:01 PM
  */
-public class AnVersion {
+public final class AnVersion {
     
     Logger logger = LoggerFactory.getLogger(AnValidator.class);
 
@@ -24,41 +25,37 @@ public class AnVersion {
     public final String anxsd = "schema.xsd";
 
     /**
-    public class SchemaInfo{
-        
-        public final String prefix;
-        public final String anxsd;
-        
-        public SchemaInfo(String prefix, String anxsd){
-            this.prefix = prefix;
-            this.anxsd = anxsd;
-        }
-    }
-    
-    public HashMap<String, SchemaInfo> schemaInfo = new HashMap<String, SchemaInfo>(){
-        {
-            put("2.0", new SchemaInfo("org.akomantoso.schema.", "schema.xsd"));
-            put("3.0", new SchemaInfo("org.oasis_open.docs.legaldocml.ns.akn.", "schema.xsd"));
-        }
-    };
-    **/
-    
-    /**
      * Major and minor version of Akoma Ntoso 
      * @param majorVersion e.g. 3.0
      * @param minorVersion e.g. CSD06
      */
-    public AnVersion(Integer majorVersion, String minorVersion){
+    public AnVersion(Integer majorVersion, String minorVersion) throws FileNotFoundException{
        this.majorVersion = majorVersion;
-       this.minorVersion = minorVersion.toLowerCase();
+       if (null != minorVersion) {
+        this.minorVersion = minorVersion.toLowerCase();
+       }
+       checkIfSchemaExists();
     }
 
     /**
      * Use this Constructor if there is no minor version
      * @param majorVersion 
      */
-    public AnVersion(Integer majorVersion){
+    public AnVersion(Integer majorVersion) throws FileNotFoundException{
         this(majorVersion, null);
+    }
+    
+    public void checkIfSchemaExists() throws FileNotFoundException{
+        String schemaPackage = this.prefix + "v" + majorVersion.toString() + (minorVersion == null ? "" : "." + minorVersion);
+        // check if package exists 
+        String schemaPackagePath = schemaPackage.replace(".", "/");
+        if (getClass().getClassLoader().getResource(schemaPackagePath) != null){
+           if (getClass().getClassLoader().getResource(schemaPackagePath + "/schema.xsd") == null) {
+               throw new FileNotFoundException("The schema for the version does not exist !");
+           }
+        } else {
+            throw new FileNotFoundException("The package for the version does not exist !");
+        }
     }
     
     /**

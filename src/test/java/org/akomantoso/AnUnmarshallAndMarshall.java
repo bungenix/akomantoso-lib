@@ -2,6 +2,9 @@ package org.akomantoso;
 
 import org.akomantoso.api.AnVersion;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
@@ -44,7 +47,15 @@ public class AnUnmarshallAndMarshall extends TestCase {
 
     public void testUnmarshall_3_0() throws JAXBException{
         
-        AnVersion version = new AnVersion(3, "CSD06");
+        AnVersion version = null ;
+        try {
+            version = new AnVersion(3, "CSD06");
+        } catch (FileNotFoundException ex) {
+            // version does not exist !
+        }
+        if (null == version) {
+            fail("Schema not found !");
+        }
         JAXBContext jc = version.getContext();
         Unmarshaller unmarshaller = jc.createUnmarshaller();
         JAXBElement<AkomaNtosoType> anType = (JAXBElement<AkomaNtosoType>)unmarshaller.unmarshal(_anDoc);
@@ -65,7 +76,15 @@ public class AnUnmarshallAndMarshall extends TestCase {
      * @throws JAXBException 
      */
    public void testMarshall_3_0() throws JAXBException{
-        AnVersion ver = new AnVersion(3, "CSD06");
+        AnVersion ver=null;
+        try {
+            ver = new AnVersion(3, "CSD03");
+        } catch (FileNotFoundException ex) {
+            // schema does not exist
+        }
+        if (null == ver) {
+            fail("Schema not found !");
+        }
         JAXBContext jc = ver.getContext();
         Marshaller marshaller = jc.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, 
