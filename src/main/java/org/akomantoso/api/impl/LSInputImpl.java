@@ -5,7 +5,8 @@ import java.io.Reader;
 import org.w3c.dom.ls.LSInput;
 
 /**
- *
+ * This class is required implementation for setting up a custom 
+ * package resolver
  * @author Ashok Hariharan
  */
 public class LSInputImpl implements LSInput {

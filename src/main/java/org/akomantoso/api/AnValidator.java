@@ -48,11 +48,11 @@ public class AnValidator {
             err = new AnValidatorError(e);
             return err;
         } catch (SAXParseException e) {
-            logger.error("Sax Parse error Validation", e);
+            logger.error("VALIDATION ERROR: Sax Parse error Validation", e);
             err = new AnValidatorError(e);
             return err;
         } catch (SAXException e) {
-            logger.error("Sax Parse error Validation", e);
+            logger.error("VALIDATION ERROR: Sax Parse error Validation", e);
             err = new AnValidatorError(e);
             return err;
         }

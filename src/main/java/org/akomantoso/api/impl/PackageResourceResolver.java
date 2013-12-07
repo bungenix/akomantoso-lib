@@ -8,6 +8,8 @@ import org.w3c.dom.ls.LSResourceResolver;
 /**
  * Stream the required / imported dtd and schemas via a Resource Resolver
  * Otherwise it may require a internet lookup for these resources
+ * The imported dtd / schemas are packaged in the library within :
+ * org.akomantoso.api.impl 
  * @author Ashok Hariharan
  */
 public class PackageResourceResolver implements LSResourceResolver {
