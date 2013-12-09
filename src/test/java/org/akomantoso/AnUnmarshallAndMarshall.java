@@ -78,7 +78,7 @@ public class AnUnmarshallAndMarshall extends TestCase {
    public void testMarshall_3_0() throws JAXBException{
         AnVersion ver=null;
         try {
-            ver = new AnVersion(3, "CSD03");
+            ver = new AnVersion(3, "CSD06");
         } catch (FileNotFoundException ex) {
             // schema does not exist
         }
