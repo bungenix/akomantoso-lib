@@ -99,30 +99,32 @@
 <span class="n">idf</span><span class="o">.</span><span class="na">setSource</span><span class="o">(</span><span class="s">"#a_source"</span><span class="o">);</span>
 </pre></div>
 
-<p>Create the <code>FRBRWork</code> element and its child elements :
-//create a work element
-FRBRWork work = of.createFRBRWork();
-//set FRBRthis on work
-ValueType vThis = new ValueType();
-vThis.setValue("/ak/bill/2013-01-01/A1/memorandum");
-work.setFRBRthis(vThis);
-//set FRBRuri on work
-ValueType vURI = new ValueType();
-vURI.setValue("/ak/bill/2013-01-01/A1");
-work.getFRBRuri().add(vURI);
-//add the identification to the work
-idf.setFRBRWork(work);</p>
+<p>Create the <code>FRBRWork</code> element and its child elements :</p>
 
-<pre><code>Add the `identification` element to the `meta` element ; and the `meta` to the document :
-```java
-//add the identifcatin on the meta
-meta.setIdentification(idf);
-//add the meta 
-ost.setMeta(meta);
-//add the doc type to the akomaNtoso element
-anType.setDoc(ost);
-marshaller.marshal(rootElem, System.out);
-</code></pre>
+<div class="highlight highlight-java"><pre><span class="c1">//create a work element</span>
+<span class="n">FRBRWork</span> <span class="n">work</span> <span class="o">=</span> <span class="n">of</span><span class="o">.</span><span class="na">createFRBRWork</span><span class="o">();</span>
+<span class="c1">//set FRBRthis on work</span>
+<span class="n">ValueType</span> <span class="n">vThis</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ValueType</span><span class="o">();</span>
+<span class="n">vThis</span><span class="o">.</span><span class="na">setValue</span><span class="o">(</span><span class="s">"/ak/bill/2013-01-01/A1/memorandum"</span><span class="o">);</span>
+<span class="n">work</span><span class="o">.</span><span class="na">setFRBRthis</span><span class="o">(</span><span class="n">vThis</span><span class="o">);</span>
+<span class="c1">//set FRBRuri on work</span>
+<span class="n">ValueType</span> <span class="n">vURI</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ValueType</span><span class="o">();</span>
+<span class="n">vURI</span><span class="o">.</span><span class="na">setValue</span><span class="o">(</span><span class="s">"/ak/bill/2013-01-01/A1"</span><span class="o">);</span>
+<span class="n">work</span><span class="o">.</span><span class="na">getFRBRuri</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="n">vURI</span><span class="o">);</span>
+<span class="c1">//add the identification to the work</span>
+<span class="n">idf</span><span class="o">.</span><span class="na">setFRBRWork</span><span class="o">(</span><span class="n">work</span><span class="o">);</span>
+</pre></div>
+
+<p>Add the <code>identification</code> element to the <code>meta</code> element ; and the <code>meta</code> to the document :</p>
+
+<div class="highlight highlight-java"><pre><span class="c1">//add the identifcatin on the meta</span>
+<span class="n">meta</span><span class="o">.</span><span class="na">setIdentification</span><span class="o">(</span><span class="n">idf</span><span class="o">);</span>
+<span class="c1">//add the meta </span>
+<span class="n">ost</span><span class="o">.</span><span class="na">setMeta</span><span class="o">(</span><span class="n">meta</span><span class="o">);</span>
+<span class="c1">//add the doc type to the akomaNtoso element</span>
+<span class="n">anType</span><span class="o">.</span><span class="na">setDoc</span><span class="o">(</span><span class="n">ost</span><span class="o">);</span>
+<span class="n">marshaller</span><span class="o">.</span><span class="na">marshal</span><span class="o">(</span><span class="n">rootElem</span><span class="o">,</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">);</span>
+</pre></div>
 
 <p>The above code outputs an Akoma Ntoso document:</p>
 
@@ -149,8 +151,8 @@ marshaller.marshal(rootElem, System.out);
 
 <p>The following loads an Akoma Ntoso document, and makes it accessible as a Java object: </p>
 
-<div class="highlight highlight-java"><pre><span class="c1">// load the context for the specific AKoma Ntoso version you want to use, here we</span>
-<span class="c1">// use the 3.0-csd06 version</span>
+<div class="highlight highlight-java"><pre><span class="c1">// load the context for the specific AKoma Ntoso version you want to use,</span>
+<span class="c1">// here we use the 3.0-csd06 version</span>
 <span class="c1">// open a Akoma Ntoso file</span>
 <span class="n">File</span> <span class="n">_anDoc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"/path/to/akomantoso_doc.xml"</span><span class="o">);</span>
 <span class="c1">// use version 3 csd06</span>
@@ -183,6 +185,20 @@ marshaller.marshal(rootElem, System.out);
 <pre><code>doc name = memorandum
 doc contains = originalVersion
 </code></pre>
+
+<h2>
+<a name="building-from-source" class="anchor" href="#building-from-source"><span class="octicon octicon-link"></span></a>Building from Source</h2>
+
+<p>The library is built using maven, to build from source :</p>
+
+<pre><code>git clone https://github.com/kohsah/akomantoso-lib.git -b master
+mvn package
+</code></pre>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>Licensed using the Apache 2.0 license</p>
       </section>
     </div>
 
