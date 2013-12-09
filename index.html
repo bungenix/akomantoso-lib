@@ -63,6 +63,8 @@
 <div class="highlight highlight-java"><pre><span class="c1">// create the root akomaNtoso element</span>
 <span class="n">ObjectFactory</span> <span class="n">of</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ObjectFactory</span><span class="o">();</span>
 <span class="n">AkomaNtosoType</span> <span class="n">anType</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AkomaNtosoType</span><span class="o">();</span>
+<span class="n">JAXBElement</span><span class="o">&lt;</span><span class="n">AkomaNtosoType</span><span class="o">&gt;</span> <span class="n">rootElem</span> <span class="o">=</span> 
+    <span class="n">of</span><span class="o">.</span><span class="na">createAkomaNtoso</span><span class="o">(</span><span class="n">anType</span><span class="o">);</span>
 </pre></div>
 
 <p>Next create a <code>doc</code> element which is an open structure type, and set its <code>@name</code> and <code>@contains</code> attributes: </p>
@@ -95,28 +97,32 @@
 <div class="highlight highlight-java"><pre><span class="c1">//create the identification element</span>
 <span class="n">Identification</span> <span class="n">idf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Identification</span><span class="o">();</span>
 <span class="n">idf</span><span class="o">.</span><span class="na">setSource</span><span class="o">(</span><span class="s">"#a_source"</span><span class="o">);</span>
-<span class="c1">//create a work element</span>
-<span class="n">FRBRWork</span> <span class="n">work</span> <span class="o">=</span> <span class="n">of</span><span class="o">.</span><span class="na">createFRBRWork</span><span class="o">();</span>
-<span class="c1">//set FRBRthis on work</span>
-<span class="n">ValueType</span> <span class="n">vThis</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ValueType</span><span class="o">();</span>
-<span class="n">vThis</span><span class="o">.</span><span class="na">setValue</span><span class="o">(</span><span class="s">"/ak/bill/2013-01-01/A1/memorandum"</span><span class="o">);</span>
-<span class="n">work</span><span class="o">.</span><span class="na">setFRBRthis</span><span class="o">(</span><span class="n">vThis</span><span class="o">);</span>
-<span class="c1">//set FRBRuri on work</span>
-<span class="n">ValueType</span> <span class="n">vURI</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ValueType</span><span class="o">();</span>
-<span class="n">vURI</span><span class="o">.</span><span class="na">setValue</span><span class="o">(</span><span class="s">"/ak/bill/2013-01-01/A1"</span><span class="o">);</span>
-<span class="n">work</span><span class="o">.</span><span class="na">getFRBRuri</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="n">vURI</span><span class="o">);</span>
-<span class="c1">//add the identification to the work</span>
-<span class="n">idf</span><span class="o">.</span><span class="na">setFRBRWork</span><span class="o">(</span><span class="n">work</span><span class="o">);</span>
-<span class="c1">//add the identifcatin on the meta</span>
-<span class="n">meta</span><span class="o">.</span><span class="na">setIdentification</span><span class="o">(</span><span class="n">idf</span><span class="o">);</span>
-<span class="c1">//add the meta </span>
-<span class="n">ost</span><span class="o">.</span><span class="na">setMeta</span><span class="o">(</span><span class="n">meta</span><span class="o">);</span>
-<span class="c1">//add the doc type to the akomaNtoso element</span>
-<span class="n">anType</span><span class="o">.</span><span class="na">setDoc</span><span class="o">(</span><span class="n">ost</span><span class="o">);</span>
-<span class="n">JAXBElement</span><span class="o">&lt;</span><span class="n">AkomaNtosoType</span><span class="o">&gt;</span> <span class="n">rootElem</span> <span class="o">=</span> 
-    <span class="n">of</span><span class="o">.</span><span class="na">createAkomaNtoso</span><span class="o">(</span><span class="n">anType</span><span class="o">);</span>
-<span class="n">marshaller</span><span class="o">.</span><span class="na">marshal</span><span class="o">(</span><span class="n">rootElem</span><span class="o">,</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">);</span>
 </pre></div>
+
+<p>Create the <code>FRBRWork</code> element and its child elements :
+//create a work element
+FRBRWork work = of.createFRBRWork();
+//set FRBRthis on work
+ValueType vThis = new ValueType();
+vThis.setValue("/ak/bill/2013-01-01/A1/memorandum");
+work.setFRBRthis(vThis);
+//set FRBRuri on work
+ValueType vURI = new ValueType();
+vURI.setValue("/ak/bill/2013-01-01/A1");
+work.getFRBRuri().add(vURI);
+//add the identification to the work
+idf.setFRBRWork(work);</p>
+
+<pre><code>Add the `identification` element to the `meta` element ; and the `meta` to the document :
+```java
+//add the identifcatin on the meta
+meta.setIdentification(idf);
+//add the meta 
+ost.setMeta(meta);
+//add the doc type to the akomaNtoso element
+anType.setDoc(ost);
+marshaller.marshal(rootElem, System.out);
+</code></pre>
 
 <p>The above code outputs an Akoma Ntoso document:</p>
 
@@ -139,7 +145,7 @@
 </pre></div>
 
 <h3>
-<a name="loading-an-xml-document" class="anchor" href="#loading-an-xml-document"><span class="octicon octicon-link"></span></a>Loading an XML document</h3>
+<a name="loading-an-xml-document-and-modifying-it-with-the-api" class="anchor" href="#loading-an-xml-document-and-modifying-it-with-the-api"><span class="octicon octicon-link"></span></a>Loading an XML document, and modifying it with the API</h3>
 
 <p>The following loads an Akoma Ntoso document, and makes it accessible as a Java object: </p>
 
@@ -153,7 +159,11 @@
 <span class="n">Unmarshaller</span> <span class="n">unmarshaller</span> <span class="o">=</span> <span class="n">jc</span><span class="o">.</span><span class="na">createUnmarshaller</span><span class="o">();</span>
 <span class="n">JAXBElement</span><span class="o">&lt;</span><span class="n">AkomaNtosoType</span><span class="o">&gt;</span> <span class="n">anType</span> <span class="o">=</span> 
     <span class="o">(</span><span class="n">JAXBElement</span><span class="o">&lt;</span><span class="n">AkomaNtosoType</span><span class="o">&gt;)</span><span class="n">unmarshaller</span><span class="o">.</span><span class="na">unmarshal</span><span class="o">(</span><span class="n">_anDoc</span><span class="o">);</span>
-<span class="n">AkomaNtosoType</span> <span class="n">anDoc</span>  <span class="o">=</span> <span class="n">anType</span><span class="o">.</span><span class="na">getValue</span><span class="o">();</span>
+</pre></div>
+
+<p>After unmarshalling, the document is available for reading &amp; modification via the API : </p>
+
+<div class="highlight highlight-java"><pre><span class="n">AkomaNtosoType</span> <span class="n">anDoc</span>  <span class="o">=</span> <span class="n">anType</span><span class="o">.</span><span class="na">getValue</span><span class="o">();</span>
 <span class="n">String</span> <span class="n">aName</span> <span class="o">=</span> <span class="n">anDoc</span><span class="o">.</span><span class="na">getDoc</span><span class="o">().</span><span class="na">getName</span><span class="o">();</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">" doc name = "</span> <span class="o">+</span> <span class="n">aName</span><span class="o">);</span>
 <span class="n">VersionType</span> <span class="n">vType</span> <span class="o">=</span> <span class="n">anDoc</span><span class="o">.</span><span class="na">getDoc</span><span class="o">().</span><span class="na">getContains</span><span class="o">();</span>
