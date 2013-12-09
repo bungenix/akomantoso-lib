@@ -1,45 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>akomantoso-lib by kohsah</title>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="akomantoso-lib : a Java API for creating and editing Akoma Ntoso XML documents" />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>akomantoso-lib</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>akomantoso-lib</h1>
-        <p>a Java API for creating and editing Akoma Ntoso XML documents</p>
 
-        <p class="view"><a href="https://github.com/kohsah/akomantoso-lib">View the Project on GitHub <small>kohsah/akomantoso-lib</small></a></p>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/kohsah/akomantoso-lib">View on GitHub</a>
 
+          <h1 id="project_title">akomantoso-lib</h1>
+          <h2 id="project_tagline">a Java API for creating and editing Akoma Ntoso XML documents</h2>
 
-        <ul>
-          <li><a href="https://github.com/kohsah/akomantoso-lib/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/kohsah/akomantoso-lib/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/kohsah/akomantoso-lib">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/kohsah/akomantoso-lib/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/kohsah/akomantoso-lib/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <p>AkomaNtoso-lib provides a Java API for the <a href="http://www.akomantoso.org">AkomaNtoso</a> schema. An AkomaNtoso XML document can be imported into its Java object representation, and also converted back to XML. The library packages versions 2 (final) and 3 (csd06) of the schema and supports both. Akoma Ntoso XML documents and Akoma Ntoso objects can be validated using the library.</p>
 
-<h3>
-<a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies</h3>
+<h2>
+<a name="releases" class="anchor" href="#releases"><span class="octicon octicon-link"></span></a>Releases</h2>
+
+<p>The library is released as a JAR file, <a href="https://github.com/kohsah/akomantoso-lib/releases/latest">Click Here !</a>.</p>
+
+<h2>
+<a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies</h2>
 
 <p>The only dependency is <a href="http://www.sl4j.org">sl4j</a> the logging facade library</p>
 
-<h3>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
-
 <h2>
-<a name="loading-an-xml-document" class="anchor" href="#loading-an-xml-document"><span class="octicon octicon-link"></span></a>Loading an XML document</h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<h3>
+<a name="loading-an-xml-document" class="anchor" href="#loading-an-xml-document"><span class="octicon octicon-link"></span></a>Loading an XML document</h3>
 
 <p>The following loads an Akoma Ntoso document, and makes it accessible as a Java object: </p>
 
@@ -73,13 +81,88 @@
 <pre><code>doc name = memorandum
 doc contains = originalVersion
 </code></pre>
+
+<h3>
+<a name="converting-object-to-xml" class="anchor" href="#converting-object-to-xml"><span class="octicon octicon-link"></span></a>Converting Object to XML</h3>
+
+<div class="highlight highlight-java"><pre><span class="n">AnVesion</span> <span class="n">ver</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AnVersion</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="s">"CSD06"</span><span class="o">);</span>
+<span class="n">JAXBContext</span> <span class="n">jc</span> <span class="o">=</span> <span class="n">ver</span><span class="o">.</span><span class="na">getContext</span><span class="o">();</span>
+<span class="n">Marshaller</span> <span class="n">marshaller</span> <span class="o">=</span> <span class="n">jc</span><span class="o">.</span><span class="na">createMarshaller</span><span class="o">();</span>
+<span class="n">marshaller</span><span class="o">.</span><span class="na">setProperty</span><span class="o">(</span><span class="n">Marshaller</span><span class="o">.</span><span class="na">JAXB_FORMATTED_OUTPUT</span><span class="o">,</span> 
+        <span class="kc">true</span><span class="o">);</span>
+<span class="c1">// create the root akomaNtoso element</span>
+<span class="n">ObjectFactory</span> <span class="n">of</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ObjectFactory</span><span class="o">();</span>
+<span class="n">AkomaNtosoType</span> <span class="n">anType</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AkomaNtosoType</span><span class="o">();</span>
+<span class="n">OpenStructure</span> <span class="n">ost</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OpenStructure</span><span class="o">();</span>
+<span class="n">ost</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"test_doc"</span><span class="o">);</span>
+<span class="n">ost</span><span class="o">.</span><span class="na">setContains</span><span class="o">(</span><span class="n">VersionType</span><span class="o">.</span><span class="na">SINGLE_VERSION</span><span class="o">);</span>
+<span class="c1">// create the meta element</span>
+<span class="n">Meta</span> <span class="n">meta</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Meta</span><span class="o">();</span>
+<span class="c1">// create the publication tag</span>
+<span class="n">Publication</span> <span class="n">pub</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Publication</span><span class="o">();</span>
+<span class="n">pub</span><span class="o">.</span><span class="na">setCurrentId</span><span class="o">(</span><span class="s">"test_pub"</span><span class="o">);</span>
+<span class="n">pub</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"pub"</span><span class="o">);</span>
+<span class="n">pub</span><span class="o">.</span><span class="na">setDate</span><span class="o">(</span><span class="s">"2013-01-01"</span><span class="o">);</span>
+<span class="n">pub</span><span class="o">.</span><span class="na">setNumber</span><span class="o">(</span><span class="s">"42"</span><span class="o">);</span>
+<span class="c1">// add the publication element to the meta element</span>
+<span class="n">meta</span><span class="o">.</span><span class="na">setPublication</span><span class="o">(</span><span class="n">pub</span><span class="o">);</span>
+<span class="c1">//create the identification element</span>
+<span class="n">Identification</span> <span class="n">idf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Identification</span><span class="o">();</span>
+<span class="n">idf</span><span class="o">.</span><span class="na">setSource</span><span class="o">(</span><span class="s">"#a_source"</span><span class="o">);</span>
+<span class="c1">//create a work element</span>
+<span class="n">FRBRWork</span> <span class="n">work</span> <span class="o">=</span> <span class="n">of</span><span class="o">.</span><span class="na">createFRBRWork</span><span class="o">();</span>
+<span class="c1">//set FRBRthis on work</span>
+<span class="n">ValueType</span> <span class="n">vThis</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ValueType</span><span class="o">();</span>
+<span class="n">vThis</span><span class="o">.</span><span class="na">setValue</span><span class="o">(</span><span class="s">"/ak/bill/2013-01-01/A1/memorandum"</span><span class="o">);</span>
+<span class="n">work</span><span class="o">.</span><span class="na">setFRBRthis</span><span class="o">(</span><span class="n">vThis</span><span class="o">);</span>
+<span class="c1">//set FRBRuri on work</span>
+<span class="n">ValueType</span> <span class="n">vURI</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ValueType</span><span class="o">();</span>
+<span class="n">vURI</span><span class="o">.</span><span class="na">setValue</span><span class="o">(</span><span class="s">"/ak/bill/2013-01-01/A1"</span><span class="o">);</span>
+<span class="n">work</span><span class="o">.</span><span class="na">getFRBRuri</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="n">vURI</span><span class="o">);</span>
+<span class="c1">//add the identification to the work</span>
+<span class="n">idf</span><span class="o">.</span><span class="na">setFRBRWork</span><span class="o">(</span><span class="n">work</span><span class="o">);</span>
+<span class="c1">//add the identifcatin on the meta</span>
+<span class="n">meta</span><span class="o">.</span><span class="na">setIdentification</span><span class="o">(</span><span class="n">idf</span><span class="o">);</span>
+<span class="c1">//add the meta </span>
+<span class="n">ost</span><span class="o">.</span><span class="na">setMeta</span><span class="o">(</span><span class="n">meta</span><span class="o">);</span>
+<span class="c1">//add the doc type to the akomaNtoso element</span>
+<span class="n">anType</span><span class="o">.</span><span class="na">setDoc</span><span class="o">(</span><span class="n">ost</span><span class="o">);</span>
+<span class="n">JAXBElement</span><span class="o">&lt;</span><span class="n">AkomaNtosoType</span><span class="o">&gt;</span> <span class="n">rootElem</span> <span class="o">=</span> 
+    <span class="n">of</span><span class="o">.</span><span class="na">createAkomaNtoso</span><span class="o">(</span><span class="n">anType</span><span class="o">);</span>
+<span class="n">marshaller</span><span class="o">.</span><span class="na">marshal</span><span class="o">(</span><span class="n">rootElem</span><span class="o">,</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">);</span>
+</pre></div>
+
+<p>The above code outputs an Akoma Ntoso document:</p>
+
+<div class="highlight highlight-xml"><pre><span class="cp">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;</span>
+<span class="nt">&lt;akomaNtoso</span> 
+  <span class="na">xmlns=</span><span class="s">"http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD06"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;doc</span> <span class="na">contains=</span><span class="s">"singleVersion"</span> <span class="na">name=</span><span class="s">"test_doc"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta&gt;</span>
+      <span class="nt">&lt;identification</span> <span class="na">source=</span><span class="s">"#a_source"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;FRBRWork&gt;</span>
+          <span class="nt">&lt;FRBRthis</span> <span class="na">value=</span><span class="s">"/ak/bill/2013-01-01/A1/memorandum"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;FRBRuri</span> <span class="na">value=</span><span class="s">"/ak/bill/2013-01-01/A1"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/FRBRWork&gt;</span>
+      <span class="nt">&lt;/identification&gt;</span>
+      <span class="nt">&lt;publication</span> <span class="na">date=</span><span class="s">"2013-01-01"</span> <span class="na">number=</span><span class="s">"42"</span> <span class="na">name=</span><span class="s">"pub"</span> 
+          <span class="na">currentId=</span><span class="s">"test_pub"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/meta&gt;</span>
+  <span class="nt">&lt;/doc&gt;</span>
+<span class="nt">&lt;/akomaNtoso&gt;</span>
+</pre></div>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/kohsah">kohsah</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">akomantoso-lib maintained by <a href="https://github.com/kohsah">kohsah</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
     
+
   </body>
 </html>
