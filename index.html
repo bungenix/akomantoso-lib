@@ -47,58 +47,40 @@
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
 
 <h3>
-<a name="loading-an-xml-document" class="anchor" href="#loading-an-xml-document"><span class="octicon octicon-link"></span></a>Loading an XML document</h3>
+<a name="creating-an-akoma-ntoso-document-using-the-java-api" class="anchor" href="#creating-an-akoma-ntoso-document-using-the-java-api"><span class="octicon octicon-link"></span></a>Creating an Akoma Ntoso document using the Java API</h3>
 
-<p>The following loads an Akoma Ntoso document, and makes it accessible as a Java object: </p>
-
-<div class="highlight highlight-java"><pre><span class="c1">// load the context for the specific AKoma Ntoso version you want to use, here we</span>
-<span class="c1">// use the 3.0-csd06 version</span>
-<span class="c1">// open a Akoma Ntoso file</span>
-<span class="n">File</span> <span class="n">_anDoc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"/path/to/akomantoso_doc.xml"</span><span class="o">);</span>
-<span class="c1">// use version 3 csd06</span>
-<span class="n">AnVersion</span> <span class="n">vSchema</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AnVersion</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="s">"CSD06"</span><span class="o">);</span>
-<span class="n">JAXBContext</span> <span class="n">cxt</span> <span class="o">=</span> <span class="n">vSchema</span><span class="o">.</span><span class="na">getContext</span><span class="o">();</span>
-<span class="n">Unmarshaller</span> <span class="n">unmarshaller</span> <span class="o">=</span> <span class="n">jc</span><span class="o">.</span><span class="na">createUnmarshaller</span><span class="o">();</span>
-<span class="n">JAXBElement</span><span class="o">&lt;</span><span class="n">AkomaNtosoType</span><span class="o">&gt;</span> <span class="n">anType</span> <span class="o">=</span> 
-    <span class="o">(</span><span class="n">JAXBElement</span><span class="o">&lt;</span><span class="n">AkomaNtosoType</span><span class="o">&gt;)</span><span class="n">unmarshaller</span><span class="o">.</span><span class="na">unmarshal</span><span class="o">(</span><span class="n">_anDoc</span><span class="o">);</span>
-<span class="n">AkomaNtosoType</span> <span class="n">anDoc</span>  <span class="o">=</span> <span class="n">anType</span><span class="o">.</span><span class="na">getValue</span><span class="o">();</span>
-<span class="n">String</span> <span class="n">aName</span> <span class="o">=</span> <span class="n">anDoc</span><span class="o">.</span><span class="na">getDoc</span><span class="o">().</span><span class="na">getName</span><span class="o">();</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">" doc name = "</span> <span class="o">+</span> <span class="n">aName</span><span class="o">);</span>
-<span class="n">VersionType</span> <span class="n">vType</span> <span class="o">=</span> <span class="n">anDoc</span><span class="o">.</span><span class="na">getDoc</span><span class="o">().</span><span class="na">getContains</span><span class="o">();</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">" doc contains = "</span> <span class="o">+</span> <span class="n">vType</span><span class="o">.</span><span class="na">getValue</span><span class="o">());</span>
-</pre></div>
-
-<p>If the imported document looked like this :</p>
-
-<div class="highlight highlight-xml"><pre><span class="nt">&lt;akomaNtoso</span> 
- <span class="na">xmlns=</span><span class="s">"http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD06"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;doc</span> <span class="na">name=</span><span class="s">"memorandum"</span> <span class="na">contains=</span><span class="s">"originalVersion"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;meta&gt;</span>
-</pre></div>
-
-<p>The java code above will output :</p>
-
-<pre><code>doc name = memorandum
-doc contains = originalVersion
-</code></pre>
-
-<h3>
-<a name="converting-object-to-xml" class="anchor" href="#converting-object-to-xml"><span class="octicon octicon-link"></span></a>Converting Object to XML</h3>
+<p>First we specify the version and create a marshaller object :</p>
 
 <div class="highlight highlight-java"><pre><span class="n">AnVesion</span> <span class="n">ver</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AnVersion</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="s">"CSD06"</span><span class="o">);</span>
 <span class="n">JAXBContext</span> <span class="n">jc</span> <span class="o">=</span> <span class="n">ver</span><span class="o">.</span><span class="na">getContext</span><span class="o">();</span>
 <span class="n">Marshaller</span> <span class="n">marshaller</span> <span class="o">=</span> <span class="n">jc</span><span class="o">.</span><span class="na">createMarshaller</span><span class="o">();</span>
 <span class="n">marshaller</span><span class="o">.</span><span class="na">setProperty</span><span class="o">(</span><span class="n">Marshaller</span><span class="o">.</span><span class="na">JAXB_FORMATTED_OUTPUT</span><span class="o">,</span> 
         <span class="kc">true</span><span class="o">);</span>
-<span class="c1">// create the root akomaNtoso element</span>
+</pre></div>
+
+<p>Next create the Akoma Ntoso <code>akomaNtoso</code> root element :</p>
+
+<div class="highlight highlight-java"><pre><span class="c1">// create the root akomaNtoso element</span>
 <span class="n">ObjectFactory</span> <span class="n">of</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ObjectFactory</span><span class="o">();</span>
 <span class="n">AkomaNtosoType</span> <span class="n">anType</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AkomaNtosoType</span><span class="o">();</span>
-<span class="n">OpenStructure</span> <span class="n">ost</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OpenStructure</span><span class="o">();</span>
+</pre></div>
+
+<p>Next create a <code>doc</code> element which is an open structure type, and set its <code>@name</code> and <code>@contains</code> attributes: </p>
+
+<div class="highlight highlight-java"><pre><span class="n">OpenStructure</span> <span class="n">ost</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OpenStructure</span><span class="o">();</span>
 <span class="n">ost</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"test_doc"</span><span class="o">);</span>
 <span class="n">ost</span><span class="o">.</span><span class="na">setContains</span><span class="o">(</span><span class="n">VersionType</span><span class="o">.</span><span class="na">SINGLE_VERSION</span><span class="o">);</span>
-<span class="c1">// create the meta element</span>
+</pre></div>
+
+<p>Add a <code>meta</code> element to hold the documents metadata :</p>
+
+<div class="highlight highlight-java"><pre><span class="c1">// create the meta element</span>
 <span class="n">Meta</span> <span class="n">meta</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Meta</span><span class="o">();</span>
-<span class="c1">// create the publication tag</span>
+</pre></div>
+
+<p>Add a <code>publication</code> within the <code>meta</code> element:</p>
+
+<div class="highlight highlight-java"><pre><span class="c1">// create the publication tag</span>
 <span class="n">Publication</span> <span class="n">pub</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Publication</span><span class="o">();</span>
 <span class="n">pub</span><span class="o">.</span><span class="na">setCurrentId</span><span class="o">(</span><span class="s">"test_pub"</span><span class="o">);</span>
 <span class="n">pub</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"pub"</span><span class="o">);</span>
@@ -106,7 +88,11 @@ doc contains = originalVersion
 <span class="n">pub</span><span class="o">.</span><span class="na">setNumber</span><span class="o">(</span><span class="s">"42"</span><span class="o">);</span>
 <span class="c1">// add the publication element to the meta element</span>
 <span class="n">meta</span><span class="o">.</span><span class="na">setPublication</span><span class="o">(</span><span class="n">pub</span><span class="o">);</span>
-<span class="c1">//create the identification element</span>
+</pre></div>
+
+<p>Now create the <code>identification</code> element in meta :</p>
+
+<div class="highlight highlight-java"><pre><span class="c1">//create the identification element</span>
 <span class="n">Identification</span> <span class="n">idf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Identification</span><span class="o">();</span>
 <span class="n">idf</span><span class="o">.</span><span class="na">setSource</span><span class="o">(</span><span class="s">"#a_source"</span><span class="o">);</span>
 <span class="c1">//create a work element</span>
@@ -151,6 +137,42 @@ doc contains = originalVersion
   <span class="nt">&lt;/doc&gt;</span>
 <span class="nt">&lt;/akomaNtoso&gt;</span>
 </pre></div>
+
+<h3>
+<a name="loading-an-xml-document" class="anchor" href="#loading-an-xml-document"><span class="octicon octicon-link"></span></a>Loading an XML document</h3>
+
+<p>The following loads an Akoma Ntoso document, and makes it accessible as a Java object: </p>
+
+<div class="highlight highlight-java"><pre><span class="c1">// load the context for the specific AKoma Ntoso version you want to use, here we</span>
+<span class="c1">// use the 3.0-csd06 version</span>
+<span class="c1">// open a Akoma Ntoso file</span>
+<span class="n">File</span> <span class="n">_anDoc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"/path/to/akomantoso_doc.xml"</span><span class="o">);</span>
+<span class="c1">// use version 3 csd06</span>
+<span class="n">AnVersion</span> <span class="n">vSchema</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AnVersion</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="s">"CSD06"</span><span class="o">);</span>
+<span class="n">JAXBContext</span> <span class="n">cxt</span> <span class="o">=</span> <span class="n">vSchema</span><span class="o">.</span><span class="na">getContext</span><span class="o">();</span>
+<span class="n">Unmarshaller</span> <span class="n">unmarshaller</span> <span class="o">=</span> <span class="n">jc</span><span class="o">.</span><span class="na">createUnmarshaller</span><span class="o">();</span>
+<span class="n">JAXBElement</span><span class="o">&lt;</span><span class="n">AkomaNtosoType</span><span class="o">&gt;</span> <span class="n">anType</span> <span class="o">=</span> 
+    <span class="o">(</span><span class="n">JAXBElement</span><span class="o">&lt;</span><span class="n">AkomaNtosoType</span><span class="o">&gt;)</span><span class="n">unmarshaller</span><span class="o">.</span><span class="na">unmarshal</span><span class="o">(</span><span class="n">_anDoc</span><span class="o">);</span>
+<span class="n">AkomaNtosoType</span> <span class="n">anDoc</span>  <span class="o">=</span> <span class="n">anType</span><span class="o">.</span><span class="na">getValue</span><span class="o">();</span>
+<span class="n">String</span> <span class="n">aName</span> <span class="o">=</span> <span class="n">anDoc</span><span class="o">.</span><span class="na">getDoc</span><span class="o">().</span><span class="na">getName</span><span class="o">();</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">" doc name = "</span> <span class="o">+</span> <span class="n">aName</span><span class="o">);</span>
+<span class="n">VersionType</span> <span class="n">vType</span> <span class="o">=</span> <span class="n">anDoc</span><span class="o">.</span><span class="na">getDoc</span><span class="o">().</span><span class="na">getContains</span><span class="o">();</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">" doc contains = "</span> <span class="o">+</span> <span class="n">vType</span><span class="o">.</span><span class="na">getValue</span><span class="o">());</span>
+</pre></div>
+
+<p>If the imported document looked like this :</p>
+
+<div class="highlight highlight-xml"><pre><span class="nt">&lt;akomaNtoso</span> 
+ <span class="na">xmlns=</span><span class="s">"http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD06"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;doc</span> <span class="na">name=</span><span class="s">"memorandum"</span> <span class="na">contains=</span><span class="s">"originalVersion"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;meta&gt;</span>
+</pre></div>
+
+<p>The java code above will output :</p>
+
+<pre><code>doc name = memorandum
+doc contains = originalVersion
+</code></pre>
       </section>
     </div>
 
