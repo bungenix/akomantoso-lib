@@ -9,15 +9,15 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import junit.framework.TestCase;
 import org.akomantoso.api.AnVersion;
-import org.akomantoso.schema.v3.csd06.AkomaNtosoType;
-import org.akomantoso.schema.v3.csd06.FRBRWork;
-import org.akomantoso.schema.v3.csd06.Identification;
-import org.akomantoso.schema.v3.csd06.Meta;
-import org.akomantoso.schema.v3.csd06.ObjectFactory;
-import org.akomantoso.schema.v3.csd06.OpenStructure;
-import org.akomantoso.schema.v3.csd06.Publication;
-import org.akomantoso.schema.v3.csd06.ValueType;
-import org.akomantoso.schema.v3.csd06.VersionType;
+import org.akomantoso.schema.v3.csd07.AkomaNtosoType;
+import org.akomantoso.schema.v3.csd07.FRBRWork;
+import org.akomantoso.schema.v3.csd07.Identification;
+import org.akomantoso.schema.v3.csd07.Meta;
+import org.akomantoso.schema.v3.csd07.ObjectFactory;
+import org.akomantoso.schema.v3.csd07.OpenStructure;
+import org.akomantoso.schema.v3.csd07.Publication;
+import org.akomantoso.schema.v3.csd07.ValueType;
+import org.akomantoso.schema.v3.csd07.VersionType;
 
 
 /**
