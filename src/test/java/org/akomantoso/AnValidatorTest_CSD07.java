@@ -12,17 +12,17 @@ import org.akomantoso.api.AnVersion;
    and column number when validation fails
  * @author Ashok Hariharan
  */
-public class AnValidatorTest extends TestCase {
+public class AnValidatorTest_CSD07 extends TestCase {
     
-    AnVersion _version = new AnVersion(3, "CSD06");
+    AnVersion _version = new AnVersion(3, "CSD07");
     // test file 1 - this should validte
-    File _validate1  = new File("./src/test/java/testdocs/akomantoso_doc.xml");    
+    File _validate1  = new File("./src/test/java/testdocs/akomantoso_doc_csd07.xml");    
     // test file 2 - this should fail 
-    File _validate2  = new File("./src/test/java/testdocs/akomantoso_act.xml");    
+    File _validate2  = new File("./src/test/java/testdocs/akomantoso_act_csd07.xml");    
     
     AnValidator _validator = new AnValidator();
     
-    public AnValidatorTest(String testName) throws IOException {
+    public AnValidatorTest_CSD07(String testName) throws IOException {
         super(testName);
     }
     

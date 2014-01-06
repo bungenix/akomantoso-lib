@@ -1,16 +1,14 @@
 package org.akomantoso;
 
-import org.akomantoso.api.AnVersion;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import junit.framework.TestCase;
+import org.akomantoso.api.AnVersion;
 import org.akomantoso.schema.v3.csd06.AkomaNtosoType;
 import org.akomantoso.schema.v3.csd06.FRBRWork;
 import org.akomantoso.schema.v3.csd06.Identification;
@@ -26,12 +24,12 @@ import org.akomantoso.schema.v3.csd06.VersionType;
  * Test marshalling and unmarshalling of xml files 
  * @author Ashok Hariharan
  */
-public class AnUnmarshallAndMarshall extends TestCase {
+public class AnUnmarshallAndMarshall_CSD06 extends TestCase {
 
-    File _anDoc  = new File("./src/test/java/testdocs/akomantoso_doc.xml");    
+    File _anDoc  = new File("./src/test/java/testdocs/akomantoso_doc_csd06.xml");    
   
     
-    public AnUnmarshallAndMarshall(String testName)  {
+    public AnUnmarshallAndMarshall_CSD06(String testName)  {
         super(testName);
     }
     
