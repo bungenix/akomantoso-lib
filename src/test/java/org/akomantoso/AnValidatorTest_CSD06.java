@@ -16,9 +16,9 @@ public class AnValidatorTest_CSD06 extends TestCase {
     
     AnVersion _version = new AnVersion(3, "CSD06");
     // test file 1 - this should validte
-    File _validate1  = new File("./src/test/java/testdocs/akomantoso_doc.xml");    
+    File _validate1  = new File("./src/test/java/testdocs/akomantoso_doc_csd06.xml");    
     // test file 2 - this should fail 
-    File _validate2  = new File("./src/test/java/testdocs/akomantoso_act.xml");    
+    File _validate2  = new File("./src/test/java/testdocs/akomantoso_act_csd06.xml");    
     
     AnValidator _validator = new AnValidator();
     
