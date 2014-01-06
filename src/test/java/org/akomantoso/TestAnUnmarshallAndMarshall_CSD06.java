@@ -24,12 +24,12 @@ import org.akomantoso.schema.v3.csd06.VersionType;
  * Test marshalling and unmarshalling of xml files 
  * @author Ashok Hariharan
  */
-public class AnUnmarshallAndMarshall_CSD06 extends TestCase {
+public class TestAnUnmarshallAndMarshall_CSD06 extends TestCase {
 
     File _anDoc  = new File("./src/test/java/testdocs/akomantoso_doc_csd06.xml");    
   
     
-    public AnUnmarshallAndMarshall_CSD06(String testName)  {
+    public TestAnUnmarshallAndMarshall_CSD06(String testName)  {
         super(testName);
     }
     

@@ -12,7 +12,7 @@ import org.akomantoso.api.AnVersion;
    and column number when validation fails
  * @author Ashok Hariharan
  */
-public class AnValidatorTest_CSD07 extends TestCase {
+public class TestAnValidatorTest_CSD07 extends TestCase {
     
     AnVersion _version = new AnVersion(3, "CSD07");
     // test file 1 - this should validte
@@ -22,7 +22,7 @@ public class AnValidatorTest_CSD07 extends TestCase {
     
     AnValidator _validator = new AnValidator();
     
-    public AnValidatorTest_CSD07(String testName) throws IOException {
+    public TestAnValidatorTest_CSD07(String testName) throws IOException {
         super(testName);
     }
     
