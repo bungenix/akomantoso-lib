@@ -1,15 +1,45 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>7</version>
+  </parent>
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.oasis_open</groupId>
   <artifactId>akomantoso-lib</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.5</version>
+  <version>1.0.5-SNAPSHOT</version>
   <name>akomantoso-lib</name>
-  <url>http://maven.apache.org</url>
+  <url>https://github.com/kohsah/akomantoso-lib</url>
+  <description>This is a java class representation of the Akoma Ntoso XML schema. 
+  Akoma Ntoso is an emerging legal document standard for representing legislative and judicial documents in XML format.
+  See both http://www.akomtantoso.org and http://code.google.com/p/akomantoso.
+  This library is generated using JAXB on the Akoma Ntoso 3.0 schema. 
+  </description>
+  <scm>
+    <url>scm:git:git://github.com/kohsah/akomantoso-lib</url>
+    <connection>https://github.com/kohsah/akomantoso-lib.git</connection>
+    <developerConnection>https://github.com/kohsah/akomantoso-lib.git</developerConnection>
+  </scm>
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+  
   <properties>
     <jdk.version>1.6</jdk.version>
+    <maven-deploy-plugin.version>2.5</maven-deploy-plugin.version>
+    <maven-release-plugin.version>2.2.2</maven-release-plugin.version>
+    <maven-source-plugin.version>2.1.2</maven-source-plugin.version>
+    <maven-javadoc-plugin.version>2.9.1</maven-javadoc-plugin.version>
+    <maven-gpg-plugin.version>1.4</maven-gpg-plugin.version>
+    <apache-rat-plugin.version>0.8</apache-rat-plugin.version>
+    <checksum-maven-plugin.version>1.0.1</checksum-maven-plugin.version>
   </properties>
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -33,25 +63,164 @@
           <version>1.7.5</version>
       </dependency>
   </dependencies>
+  
   <build>
-  <plugins>
-    <plugin>
-	<groupId>org.apache.maven.plugins</groupId>
-	<artifactId>maven-compiler-plugin</artifactId>
-	<version>2.3.2</version>
-	<configuration>
-		<source>${jdk.version}</source>
-		<target>${jdk.version}</target>
-	</configuration>
-    </plugin>
-   </plugins>
-   <resources>
-    <resource>
-     <directory>${basedir}/src/main/java</directory>
-     <excludes>
-         <exclude>**/*.java</exclude>
-     </excludes>
-    </resource>
-   </resources>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>${maven-deploy-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>${maven-release-plugin.version}</version>
+          <configuration>
+            <mavenExecutorId>forked-path</mavenExecutorId>
+            <tagBase>https://github.com/kohsah/akomantoso-lib/releases/</tagBase>
+            <useReleaseProfile>false</useReleaseProfile>
+            <arguments>-Prelease</arguments>
+            <!--autoVersionSubmodules>true</autoVersionSubmodules -->
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <source>${jdk.version}</source>
+          <target>${jdk.version}</target>
+        </configuration>
+      </plugin>
+    </plugins>
+    <resources>
+      <resource>
+        <directory>${basedir}/src/main/java</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
   </build>
+  
+  <profiles>
+    <profile>
+      <id>release</id>
+      <build>
+        <plugins>
+          <!-- <plugin> 
+            <groupId>org.apache.rat</groupId> 
+            <artifactId>apache-rat-plugin</artifactId> 
+            <version>${apache-rat-plugin.version}</version> 
+            <executions> 
+              <execution> 
+                <id>rat-verify</id> 
+                <phase>test</phase> 
+                <goals> 
+                  <goal>check</goal> 
+                </goals> 
+              </execution> 
+            </executions> 
+            <configuration> 
+              <licenses> 
+                <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense"> 
+                  <licenseFamilyCategory>ASL20</licenseFamilyCategory> 
+                  <licenseFamilyName>Apache Software License, 2.0</licenseFamilyName> 
+                  <notes>Single licensed ASL v2.0</notes> 
+                  <patterns> 
+                    <pattern>
+                    Licensed to the Apache Software Foundation (ASF) under 
+                    one or more contributor license agreements.
+                    </pattern> 
+                  </patterns> 
+                </license> 
+              </licenses> 
+              <excludeSubProjects>false</excludeSubProjects> 
+              <excludes> 
+                <exclude>CHANGES.txt</exclude> 
+              </excludes> 
+            </configuration> 
+          </plugin -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <version>${maven-source-plugin.version}</version>
+            <executions>
+              <execution>
+                <id>attach-sources</id>
+                <goals>
+                  <goal>jar-no-fork</goal>
+                </goals>
+                <configuration>
+                  <archive>
+                    <manifest>
+                      <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                      <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                    </manifest>
+                    <manifestEntries>
+                      <Implementation-Build>${implementation.build}</Implementation-Build>
+                      <Implementation-Build-Date>${maven.build.timestamp}</Implementation-Build-Date>
+                      <X-Compile-Source-JDK>${javac.src.version}</X-Compile-Source-JDK>
+                      <X-Compile-Target-JDK>${javac.target.version}</X-Compile-Target-JDK>
+                    </manifestEntries>
+                  </archive>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>${maven-javadoc-plugin.version}</version>
+            <executions>
+              <execution>
+                <id>attach-javadocs</id>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+                <configuration>
+                  <quiet>true</quiet>
+                  <archive>
+                    <manifest>
+                      <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                      <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                    </manifest>
+                    <manifestEntries>
+                      <Implementation-Build>${implementation.build}</Implementation-Build>
+                      <Implementation-Build-Date>${maven.build.timestamp}</Implementation-Build-Date>
+                      <X-Compile-Source-JDK>${javac.src.version}</X-Compile-Source-JDK>
+                      <X-Compile-Target-JDK>${javac.target.version}</X-Compile-Target-JDK>
+                    </manifestEntries>
+                  </archive>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>${maven-gpg-plugin.version}</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>net.ju-n.maven.plugins</groupId>
+            <artifactId>checksum-maven-plugin</artifactId>
+            <version>${checksum-maven-plugin.version}</version>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>
