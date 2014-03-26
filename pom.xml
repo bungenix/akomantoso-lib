@@ -9,11 +9,7 @@
   <groupId>org.oasis_open</groupId>
   <artifactId>akomantoso-lib</artifactId>
   <packaging>jar</packaging>
-<<<<<<< HEAD
-  <version>1.0.5-SNAPSHOT</version>
-=======
   <version>1.0.6</version>
->>>>>>> 765e690829f7a66a942a38b7165c2dfe0196027a
   <name>akomantoso-lib</name>
   <url>https://github.com/kohsah/akomantoso-lib</url>
   <description>This is a java class representation of the Akoma Ntoso XML schema. 
