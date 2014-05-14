@@ -29,9 +29,9 @@
   This library is generated using JAXB on the Akoma Ntoso 3.0 schema. 
   </description>
   <scm>
-    <url>scm:git:git@github.com:kohsah/akomantoso-lib.git</url>
-    <connection>scm:git:git@github.com:kohsah/akomantoso-lib.git</connection>
-    <developerConnection>scm:git:git@github.com:kohsah/akomantoso-lib.git</developerConnection>
+    <url>scm:git:git@github.com/kohsah/akomantoso-lib.git</url>
+    <connection>scm:git:git@github.com/kohsah/akomantoso-lib.git</connection>
+    <developerConnection>scm:git:git@github.com/kohsah/akomantoso-lib.git</developerConnection>
   </scm>
   <licenses>
     <license>
@@ -42,12 +42,12 @@
   
   <properties>
     <jdk.version>1.6</jdk.version>
-    <maven-deploy-plugin.version>2.5</maven-deploy-plugin.version>
-    <maven-release-plugin.version>2.2.2</maven-release-plugin.version>
-    <maven-source-plugin.version>2.1.2</maven-source-plugin.version>
+    <maven-deploy-plugin.version>2.8.1</maven-deploy-plugin.version>
+    <maven-release-plugin.version>2.5</maven-release-plugin.version>
+    <maven-source-plugin.version>2.2.1</maven-source-plugin.version>
     <maven-javadoc-plugin.version>2.9.1</maven-javadoc-plugin.version>
-    <maven-gpg-plugin.version>1.4</maven-gpg-plugin.version>
-    <apache-rat-plugin.version>0.8</apache-rat-plugin.version>
+    <maven-gpg-plugin.version>1.5</maven-gpg-plugin.version>
+    <!--<apache-rat-plugin.version>0.8</apache-rat-plugin.version>-->
     <checksum-maven-plugin.version>1.0.1</checksum-maven-plugin.version>
   </properties>
   
