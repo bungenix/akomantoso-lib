@@ -5,6 +5,21 @@
     <artifactId>oss-parent</artifactId>
     <version>7</version>
   </parent>
+  
+  <distributionManagement>
+    <!-- snapshot repo did not work correctly, reverting to using staging repo -->
+    <!--
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    -->
+      <repository>
+          <id>sonatype-nexus-staging</id>
+          <name>Nexus Staging Repository</name>
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      </repository>
+  </distributionManagement>
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.oasis_open</groupId>
   <artifactId>akomantoso-lib</artifactId>
@@ -18,9 +33,9 @@
   This library is generated using JAXB on the Akoma Ntoso 3.0 schema. 
   </description>
   <scm>
-    <url>scm:git:git://github.com/kohsah/akomantoso-lib</url>
-    <connection>https://github.com/kohsah/akomantoso-lib.git</connection>
-    <developerConnection>https://github.com/kohsah/akomantoso-lib.git</developerConnection>
+    <url>scm:git:git@github.com:kohsah/akomantoso-lib.git</url>
+    <connection>scm:git:git@github.com:kohsah/akomantoso-lib.git</connection>
+    <developerConnection>scm:git:git@github.com:kohsah/akomantoso-lib.git</developerConnection>
   </scm>
   <licenses>
     <license>
@@ -72,16 +87,16 @@
           <artifactId>maven-deploy-plugin</artifactId>
           <version>${maven-deploy-plugin.version}</version>
         </plugin>
+
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-release-plugin</artifactId>
           <version>${maven-release-plugin.version}</version>
           <configuration>
-            <mavenExecutorId>forked-path</mavenExecutorId>
-            <tagBase>https://github.com/kohsah/akomantoso-lib/releases/</tagBase>
+            <autoVersionSubmodules>true</autoVersionSubmodules>
             <useReleaseProfile>false</useReleaseProfile>
-            <arguments>-Prelease</arguments>
-            <!--autoVersionSubmodules>true</autoVersionSubmodules -->
+            <releaseProfiles>release</releaseProfiles>
+            <goals>deploy</goals>
           </configuration>
         </plugin>
       </plugins>
@@ -95,6 +110,17 @@
           <source>${jdk.version}</source>
           <target>${jdk.version}</target>
         </configuration>
+      </plugin>
+      <!-- for staging on sonatype nexus -->
+      <plugin>
+      <groupId>org.sonatype.plugins</groupId>
+       <artifactId>nexus-staging-maven-plugin</artifactId>
+       <version>1.6</version>
+       <extensions>true</extensions>
+       <configuration>
+           <serverId>ossrh</serverId>
+           <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+       </configuration>
       </plugin>
     </plugins>
     <resources>
