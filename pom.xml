@@ -20,7 +20,7 @@
   <groupId>org.oasis_open</groupId>
   <artifactId>akomantoso-lib</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.8-SNAPSHOT</version>
+  <version>1.0.8</version>
   <name>akomantoso-lib</name>
   <url>https://github.com/kohsah/akomantoso-lib</url>
   <description>This is a java class representation of the Akoma Ntoso XML schema. 
@@ -32,7 +32,7 @@
     <url>scm:git:https://github.com/kohsah/akomantoso-lib.git</url>
     <connection>scm:git:https://github.com/kohsah/akomantoso-lib.git</connection>
     <developerConnection>scm:git:https://github.com/kohsah/akomantoso-lib.git</developerConnection>
-    <tag>1.0.7</tag>
+    <tag>1.0.8</tag>
   </scm>
   <licenses>
     <license>
@@ -120,6 +120,7 @@
        <configuration>
            <serverId>ossrh</serverId>
            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+        <autoReleaseAfterClose>true</autoReleaseAfterClose>
        </configuration>
       </plugin>
     </plugins>
