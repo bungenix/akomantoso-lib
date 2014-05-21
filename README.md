@@ -12,8 +12,8 @@ You can find out much more about Akoma Ntoso Lib at the [project website](http:/
 
 For more information on Akoma Ntoso and ongoing work in this area, please see below. 
 
-http://www.akomtantoso.org
-http://code.google.com/p/akomantoso
+ * http://www.akomtantoso.org
+ * http://code.google.com/p/akomantoso
 
 This library is generated using JAXB on the Akoma Ntoso 3.0 schema. 
 
