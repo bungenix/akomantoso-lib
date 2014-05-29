@@ -5,10 +5,9 @@ import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
 /**
- *
- * User: Ashok Hariharan
- * Date: 11/26/13
- * Time: 2:31 PM
+ * Used by the AnValidator class.
+ * Stores validation errors that occur during validation.
+ * if there are no validation errors, the isError() API returns false.
  *
  */
 public class AnValidatorError {

@@ -50,7 +50,11 @@ public final class AnVersion {
         this(majorVersion, null);
     }
     
-    public void checkIfSchemaExists() throws FileNotFoundException{
+    /**
+     * Checks if the schema exists within the package
+     * @throws FileNotFoundException 
+     */
+    private void checkIfSchemaExists() throws FileNotFoundException{
         String schemaPackage = this.prefix + "v" + majorVersion.toString() + (minorVersion == null ? "" : "." + minorVersion);
         // check if package exists 
         String schemaPackagePath = schemaPackage.replace(".", "/");

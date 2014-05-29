@@ -2,7 +2,7 @@
   <parent>
     <groupId>org.sonatype.oss</groupId>
     <artifactId>oss-parent</artifactId>
-    <version>7</version>
+    <version>9</version>
   </parent>
   
   <distributionManagement>
@@ -48,7 +48,6 @@
     <maven-source-plugin.version>2.2.1</maven-source-plugin.version>
     <maven-javadoc-plugin.version>2.9.1</maven-javadoc-plugin.version>
     <maven-gpg-plugin.version>1.5</maven-gpg-plugin.version>
-    <!--<apache-rat-plugin.version>0.8</apache-rat-plugin.version>-->
     <checksum-maven-plugin.version>1.0.1</checksum-maven-plugin.version>
   </properties>
   

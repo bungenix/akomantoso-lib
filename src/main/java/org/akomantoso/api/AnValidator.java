@@ -1,12 +1,19 @@
-package org.akomantoso.api;
-
-/**
+/*
+ * Copyright 2014 Ashok Hariharan.
  *
- * User: Ashok Hariharan
- * Date: 11/25/13
- * Time: 2:08 PM
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+package org.akomantoso.api;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,14 +29,26 @@ import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
-
+/**
+ * Class that encapsulates a validator for Akoma Ntoso documents to 
+ * check against a specific version of the schema.
+ * @author ashok
+ */
 public class AnValidator {
-    Logger logger = LoggerFactory.getLogger(AnValidator.class);
+    private static Logger logger = LoggerFactory.getLogger(AnValidator.class);
 
     public AnValidator() {
     }
 
-    public AnValidatorError validate(AnVersion version, File ftoValidate) throws SAXException {
+    
+    /**
+     * Validates an Xml file against a specific Akoma Ntoso version. 
+     * @param version
+     * @param ftoValidate
+     * @return an Object of type AnValidatorError
+     * @throws SAXException 
+     */
+    public static AnValidatorError validate(AnVersion version, File ftoValidate) throws SAXException {
 
         AnValidatorError err = new AnValidatorError();
         Source schemaSource = new StreamSource(version.getSchemaForVersion());
