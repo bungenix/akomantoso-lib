@@ -21,13 +21,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- *
- * @author ashok
+ * Helper class to resolve doc type of an input XML document
+ * @author Ashok Hariharan
  */
 public class AnTypeGetterHelper {
     
     private static Logger logger = LoggerFactory.getLogger(AnTypeGetterHelper.class);
     
+    /**
+     * Stores the name of the doc type and its corresponding accessor method
+     */
     private static class AnTypeMethod {
         
         public final String anType;
@@ -39,6 +42,9 @@ public class AnTypeGetterHelper {
         }
     }
     
+    /**
+     * Map of all supported doc types and accessor methods
+     */
     private static final AnTypeMethod[] anTypeMethods = {
         new AnTypeMethod("act", "getAct"),
         new AnTypeMethod("amendment", "getAmendent"),
@@ -54,6 +60,12 @@ public class AnTypeGetterHelper {
         new AnTypeMethod("statement", "getStatement"), 
     };
     
+    /**
+     * Checks if an accessor method exists, returns it.
+     * @param anType
+     * @param anMethod
+     * @return 
+     */
     private static Method getMethod(Object anType, String anMethod){
         Method typeMethod = null;
         try {
@@ -70,6 +82,9 @@ public class AnTypeGetterHelper {
      * We check the AkomaNtosoType object for the document type accessor methods
      * Only the valid document type accessor will return a non-null value.
      * @param anType 
+     * @return an Object array whose first element is a String containing the name of the 
+     * element type, and the second is the output object from getBill(), getAct() etc as 
+     * it may resolve to.
      */
     public static Object[] getDocType(Object anType) {
         Object[] retArr = null;
@@ -105,9 +120,5 @@ public class AnTypeGetterHelper {
         }
         return retArr;
     }
-    
-    
-    
-    
     
 }

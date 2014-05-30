@@ -17,6 +17,9 @@ package org.akomantoso.api;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.Reader;
+import java.net.URI;
 import javax.xml.XMLConstants;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
@@ -32,7 +35,7 @@ import org.xml.sax.SAXParseException;
 /**
  * Class that encapsulates a validator for Akoma Ntoso documents to 
  * check against a specific version of the schema.
- * @author ashok
+ * @author Ashok
  */
 public class AnValidator {
     private static Logger logger = LoggerFactory.getLogger(AnValidator.class);
@@ -40,19 +43,68 @@ public class AnValidator {
     public AnValidator() {
     }
 
-    
     /**
-     * Validates an Xml file against a specific Akoma Ntoso version. 
-     * @param version
-     * @param ftoValidate
-     * @return an Object of type AnValidatorError
+     * Validates a schema against a specific version. The version of the schema is 
+     * specified as an AnVersion object. Only schema versions packaged in the library can be validated.
+     * @param version 
+     * @param reader a stream reader object of the file to be validated
+     * @return
      * @throws SAXException 
      */
-    public static AnValidatorError validate(AnVersion version, File ftoValidate) throws SAXException {
+    public static AnValidatorError validate(AnVersion version, Reader reader) throws SAXException {
+        Source readerSource = new StreamSource(reader);
+        return validate(version, readerSource);
+    }
 
+    /**
+     * Validates a schema against a specific version. The version of the schema is 
+     * specified as an AnVersion object. Only schema versions packaged in the library can be validated.
+     * @param version 
+     * @param iStream a stream object of the file to be validated
+     * @return
+     * @throws SAXException 
+     */    
+    public static AnValidatorError validate(AnVersion version, InputStream iStream) throws SAXException {
+        Source streamSource = new StreamSource(iStream);
+        return validate(version, streamSource);
+    }   
+    
+    /**
+     * Validates a schema against a specific version. The version of the schema is 
+     * specified as an AnVersion object. Only schema versions packaged in the library can be validated.
+     * @param version 
+     * @param reader a URI to the file to be validated
+     * @return
+     * @throws SAXException 
+     */
+    public static AnValidatorError validate(AnVersion version, URI uri) throws SAXException {
+        Source uriSource = new StreamSource(uri.toASCIIString());
+        return validate(version, uriSource);
+    }   
+    
+    /**
+     * Validates a schema against a specific version. The version of the schema is 
+     * specified as an AnVersion object. Only schema versions packaged in the library can be validated.
+     * @param version 
+     * @param ftoValidate a file handle to the file to be validated
+     * @return
+     * @throws SAXException 
+     */    public static AnValidatorError validate(AnVersion version, File ftoValidate) throws SAXException {
+        Source fileSource = new StreamSource(ftoValidate);
+        return validate(version, fileSource);
+    }
+    
+    /**
+    * Validates a schema against a specific version. The version of the schema is 
+    * specified as an AnVersion object. Only schema versions packaged in the library can be validated.
+    * @param version 
+    * @param reader a stream reader object of the file to be validated
+    * @return
+    * @throws SAXException 
+    */
+    public static AnValidatorError validate(AnVersion version, Source sSource) throws SAXException {
         AnValidatorError err = new AnValidatorError();
         Source schemaSource = new StreamSource(version.getSchemaForVersion());
-        Source fileSource = new StreamSource(ftoValidate);
         SchemaFactory schemaFactory = SchemaFactory.newInstance(
                 XMLConstants.W3C_XML_SCHEMA_NS_URI
                 );
@@ -61,7 +113,7 @@ public class AnValidator {
         final Schema schema = schemaFactory.newSchema(schemaSource);
         final Validator validator = schema.newValidator();
         try {
-            validator.validate(fileSource);
+            validator.validate(sSource);
         } catch (IOException e) {
             logger.error("IO error during validation", e);
             err = new AnValidatorError(e);
