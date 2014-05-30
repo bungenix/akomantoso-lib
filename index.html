@@ -31,12 +31,22 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <p>AkomaNtoso-lib provides a Java API for the <a href="http://www.akomantoso.org">AkomaNtoso</a> schema. An AkomaNtoso XML document can be imported into its Java object representation, and also converted back to XML. The library packages versions 2 (final) and 3 (draft releases 6 &amp; 7 - csd06, csd07) of the schema and supports both. Akoma Ntoso XML documents and Akoma Ntoso objects can be validated using the library.</p>
+        <p>AkomaNtoso-lib provides a Java API for the <a href="http://www.akomantoso.org">AkomaNtoso</a> schema. An AkomaNtoso XML document can be imported into its Java object representation, and also converted back to XML. The library packages and supports versions 2 (final) and 3 (draft releases from 6 upto 10: csd06 -&gt; csd10) of the schema. Akoma Ntoso XML documents and Akoma Ntoso objects can be validated using the library.</p>
 
 <h2>
 <a name="releases" class="anchor" href="#releases"><span class="octicon octicon-link"></span></a>Releases</h2>
 
 <p>The library is released as source code, and as a ready to use JAR file, <a href="https://github.com/kohsah/akomantoso-lib/releases/latest">Click Here for the JAR file !</a>.</p>
+
+<p>The library is also published as an artifact on <a href="http://repo1.maven.org/maven2/io/github/kohsah/akomantoso-lib/">maven central</a>. 
+Use the following metadata information in your pom.xml file :</p>
+
+<div class="highlight highlight-xml"><pre><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>io.github.kohsah<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>akomantoso-lib<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>1.0.11<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</pre></div>
 
 <h2>
 <a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies</h2>
@@ -147,7 +157,45 @@
 </pre></div>
 
 <h3>
+<a name="parsing-an-akoma-ntoso-xml-document-and-loading-it-as-an-object" class="anchor" href="#parsing-an-akoma-ntoso-xml-document-and-loading-it-as-an-object"><span class="octicon octicon-link"></span></a>Parsing an Akoma Ntoso XML document, and loading it as an Object</h3>
+
+<p>First specify the version:</p>
+
+<div class="highlight highlight-java"><pre> <span class="n">AnVersion</span> <span class="n">_version</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AnVersion</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="s">"CSD07"</span><span class="o">);</span>
+</pre></div>
+
+<p>Currently, all Akoma Ntoso versions upto the CSD10 release are supported.</p>
+
+<p>Next, specify the file you want to load:</p>
+
+<div class="highlight highlight-java"><pre> <span class="c1">// file to parse and discover type</span>
+ <span class="n">File</span> <span class="n">_parse</span>  <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"./src/test/java/testdocs/akomantoso_doc_csd07.xml"</span><span class="o">);</span>    
+</pre></div>
+
+<p>This can also be an <code>InputStream</code>, <code>Reader</code> or <code>URI</code>.</p>
+
+<p>Now call the <code>parse()</code> api:</p>
+
+<div class="highlight highlight-java"><pre><span class="n">AnDocType</span> <span class="n">resultDoc</span> <span class="o">=</span> <span class="n">AnParser</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">_version</span><span class="o">,</span> <span class="n">_parse</span><span class="o">);</span>
+</pre></div>
+
+<p>This will return a <code>AnDocType</code> object containing:</p>
+
+<ul>
+<li>
+<code>typeName</code> - the actual type of the document - act, bill, amendmentList, debate, debateReport etc. This corresponds to the element name of the type in Akoma Ntoso.</li>
+<li>
+<code>objType</code> - an object of the specific type. For e.g. the <code>doc</code> type of Akoma Ntoso uses the <code>OpenStructure</code> type in akomantoso-lib. This will be the type of object contained in <code>objType</code>
+</li>
+<li>
+<code>objClass</code> - this is the full class name of the type in objType.</li>
+</ul><p>Via, the returned <code>objType</code> you can access all the methods of the returned document type.</p>
+
+<h3>
 <a name="loading-an-xml-document-and-modifying-it-with-the-api" class="anchor" href="#loading-an-xml-document-and-modifying-it-with-the-api"><span class="octicon octicon-link"></span></a>Loading an XML document, and modifying it with the API</h3>
+
+<p>This is a more involved way of doing the same as was described in the previous section. 
+Here you need to explicitly call getAct() / getBill() / getDebate() as the case may be to access the actual document type information.</p>
 
 <p>The following loads an Akoma Ntoso document, and makes it accessible as a Java object: </p>
 
@@ -198,7 +246,7 @@ mvn package
 <h2>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
-<p>Licensed using the Apache 2.0 license</p>
+<p>Licensed using the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache 2.0 license</a></p>
       </section>
     </div>
 
