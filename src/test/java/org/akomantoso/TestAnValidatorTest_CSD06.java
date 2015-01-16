@@ -52,7 +52,7 @@ public class TestAnValidatorTest_CSD06 extends TestCase {
         System.out.println("error details : ");
         System.out.println(" line : " + result.getLineNumber() + ", "
                 + "col : " + result.getColumnNumber());
-        assertEquals("line number should be 209 !", result.getLineNumber(), (Integer)209);
-        assertEquals("col number should be 131 !", result.getColumnNumber(), (Integer)131);
+        assertEquals("line number should be 209 !", result.getLineNumber(), (Integer)17);
+        assertEquals("col number should be 131 !", result.getColumnNumber(), (Integer)99);
     }
 }

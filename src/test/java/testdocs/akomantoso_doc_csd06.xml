@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD06 ../../../main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/akomantoso30.xsd"
+	xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD06 ../../../main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/csd06/schema.xsd"
  xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD06">
 	<!-- Task funded by UN/DESA. Analysis and markup performed by Monica Palmirani, CIRSFID, University of Bologna -->
 	<!-- memorandum of bill as annex-->

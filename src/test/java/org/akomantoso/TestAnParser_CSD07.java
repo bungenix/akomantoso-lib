@@ -5,8 +5,6 @@ import java.io.IOException;
 import junit.framework.TestCase;
 import org.akomantoso.api.AnDocType;
 import org.akomantoso.api.AnParser;
-import org.akomantoso.api.AnValidator;
-import org.akomantoso.api.AnValidatorError;
 import org.akomantoso.api.AnVersion;
 
 /**
