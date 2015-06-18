@@ -1,0 +1,29 @@
+<jaxb:bindings
+    xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="1.0"
+    xmlns:xjc= "http://java.sun.com/xml/ns/jaxb/xjc" jaxb:extensionBindingPrefixes="xjc"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    schemaLocation="schema.xsd">
+    <jaxb:globalBindings generateMixedExtensions="true"/>
+    <jaxb:schemaBindings>
+      <jaxb:package name="org.akomantoso.schema.v2"/>
+    </jaxb:schemaBindings>
+    <!-- rename the value element -->
+
+    <jaxb:bindings node="//xs:attributeGroup[@name='HTMLattrs']">
+        <jaxb:bindings node="./xs:attribute[@name='title']">
+            <jaxb:property name="titleAttr"/>
+        </jaxb:bindings>
+    </jaxb:bindings>
+
+    <jaxb:bindings node="//xs:complexType[@name='inline']">
+        <jaxb:class name="ComplexTypeInline"/>
+    </jaxb:bindings>
+    <jaxb:bindings node="//xs:element[@name='inline']">
+        <jaxb:class name="ElementInline"/>
+    </jaxb:bindings>
+     <!--
+    <jaxb:bindings node="//xs:element[@name='inline']">
+       <jaxb:property name="inlineElem"/>
+    </jaxb:bindings>
+    -->
+</jaxb:bindings>
