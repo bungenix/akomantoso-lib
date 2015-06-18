@@ -2,9 +2,9 @@
 <html>
 
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="akomantoso-lib : a Java API for creating and editing Akoma Ntoso XML documents" />
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="akomantoso-lib : a Java API for creating and editing Akoma Ntoso XML documents">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
@@ -34,150 +34,137 @@
         <p>AkomaNtoso-lib provides a Java API for the <a href="http://www.akomantoso.org">AkomaNtoso</a> schema. An AkomaNtoso XML document can be imported into its Java object representation, and also converted back to XML. The library packages and supports versions 2 (final) and 3 (draft releases from 6 upto 10: csd06 -&gt; csd10) of the schema. Akoma Ntoso XML documents and Akoma Ntoso objects can be validated using the library.</p>
 
 <h2>
-<a name="releases" class="anchor" href="#releases"><span class="octicon octicon-link"></span></a>Releases</h2>
+<a id="releases" class="anchor" href="#releases" aria-hidden="true"><span class="octicon octicon-link"></span></a>Releases</h2>
 
 <p>The library is released as source code, and as a ready to use JAR file, <a href="https://github.com/kohsah/akomantoso-lib/releases/latest">Click Here for the JAR file !</a>.</p>
 
 <p>The library is also published as an artifact on <a href="http://repo1.maven.org/maven2/io/github/kohsah/akomantoso-lib/">maven central</a>. 
 Use the following metadata information in your pom.xml file :</p>
 
-<div class="highlight highlight-xml"><pre><span class="nt">&lt;dependency&gt;</span>
-  <span class="nt">&lt;groupId&gt;</span>io.github.kohsah<span class="nt">&lt;/groupId&gt;</span>
-  <span class="nt">&lt;artifactId&gt;</span>akomantoso-lib<span class="nt">&lt;/artifactId&gt;</span>
-  <span class="nt">&lt;version&gt;</span>1.0.11<span class="nt">&lt;/version&gt;</span>
-<span class="nt">&lt;/dependency&gt;</span>
-</pre></div>
+<div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">dependency</span>&gt;
+  &lt;<span class="pl-ent">groupId</span>&gt;io.github.kohsah&lt;/<span class="pl-ent">groupId</span>&gt;
+  &lt;<span class="pl-ent">artifactId</span>&gt;akomantoso-lib&lt;/<span class="pl-ent">artifactId</span>&gt;
+  &lt;<span class="pl-ent">version</span>&gt;1.0.11&lt;/<span class="pl-ent">version</span>&gt;
+&lt;/<span class="pl-ent">dependency</span>&gt;</pre></div>
 
 <h2>
-<a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies</h2>
+<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies</h2>
 
 <p>The only dependency is <a href="http://www.sl4j.org">sl4j</a> the logging facade library</p>
 
 <h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
 
 <h3>
-<a name="creating-an-akoma-ntoso-document-using-the-java-api" class="anchor" href="#creating-an-akoma-ntoso-document-using-the-java-api"><span class="octicon octicon-link"></span></a>Creating an Akoma Ntoso document using the Java API</h3>
+<a id="creating-an-akoma-ntoso-document-using-the-java-api" class="anchor" href="#creating-an-akoma-ntoso-document-using-the-java-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating an Akoma Ntoso document using the Java API</h3>
 
 <p>First we specify the version and create a marshaller object :</p>
 
-<div class="highlight highlight-java"><pre><span class="n">AnVesion</span> <span class="n">ver</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AnVersion</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="s">"CSD06"</span><span class="o">);</span>
-<span class="n">JAXBContext</span> <span class="n">jc</span> <span class="o">=</span> <span class="n">ver</span><span class="o">.</span><span class="na">getContext</span><span class="o">();</span>
-<span class="n">Marshaller</span> <span class="n">marshaller</span> <span class="o">=</span> <span class="n">jc</span><span class="o">.</span><span class="na">createMarshaller</span><span class="o">();</span>
-<span class="n">marshaller</span><span class="o">.</span><span class="na">setProperty</span><span class="o">(</span><span class="n">Marshaller</span><span class="o">.</span><span class="na">JAXB_FORMATTED_OUTPUT</span><span class="o">,</span> 
-        <span class="kc">true</span><span class="o">);</span>
-</pre></div>
+<div class="highlight highlight-java"><pre><span class="pl-smi">AnVesion</span> ver <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">AnVersion</span>(<span class="pl-c1">3</span>, <span class="pl-s"><span class="pl-pds">"</span>CSD06<span class="pl-pds">"</span></span>);
+<span class="pl-smi">JAXBContext</span> jc <span class="pl-k">=</span> ver<span class="pl-k">.</span>getContext();
+<span class="pl-smi">Marshaller</span> marshaller <span class="pl-k">=</span> jc<span class="pl-k">.</span>createMarshaller();
+marshaller<span class="pl-k">.</span>setProperty(<span class="pl-smi">Marshaller</span><span class="pl-c1"><span class="pl-k">.</span>JAXB_FORMATTED_OUTPUT</span>, 
+        <span class="pl-c1">true</span>);</pre></div>
 
 <p>Next create the Akoma Ntoso <code>akomaNtoso</code> root element :</p>
 
-<div class="highlight highlight-java"><pre><span class="c1">// create the root akomaNtoso element</span>
-<span class="n">ObjectFactory</span> <span class="n">of</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ObjectFactory</span><span class="o">();</span>
-<span class="n">AkomaNtosoType</span> <span class="n">anType</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AkomaNtosoType</span><span class="o">();</span>
-<span class="n">JAXBElement</span><span class="o">&lt;</span><span class="n">AkomaNtosoType</span><span class="o">&gt;</span> <span class="n">rootElem</span> <span class="o">=</span> 
-    <span class="n">of</span><span class="o">.</span><span class="na">createAkomaNtoso</span><span class="o">(</span><span class="n">anType</span><span class="o">);</span>
-</pre></div>
+<div class="highlight highlight-java"><pre><span class="pl-c">// create the root akomaNtoso element</span>
+<span class="pl-smi">ObjectFactory</span> of <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">ObjectFactory</span>();
+<span class="pl-smi">AkomaNtosoType</span> anType <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">AkomaNtosoType</span>();
+<span class="pl-k">JAXBElement&lt;<span class="pl-smi">AkomaNtosoType</span>&gt;</span> rootElem <span class="pl-k">=</span> 
+    of<span class="pl-k">.</span>createAkomaNtoso(anType);</pre></div>
 
 <p>Next create a <code>doc</code> element which is an open structure type, and set its <code>@name</code> and <code>@contains</code> attributes: </p>
 
-<div class="highlight highlight-java"><pre><span class="n">OpenStructure</span> <span class="n">ost</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OpenStructure</span><span class="o">();</span>
-<span class="n">ost</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"test_doc"</span><span class="o">);</span>
-<span class="n">ost</span><span class="o">.</span><span class="na">setContains</span><span class="o">(</span><span class="n">VersionType</span><span class="o">.</span><span class="na">SINGLE_VERSION</span><span class="o">);</span>
-</pre></div>
+<div class="highlight highlight-java"><pre><span class="pl-smi">OpenStructure</span> ost <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">OpenStructure</span>();
+ost<span class="pl-k">.</span>setName(<span class="pl-s"><span class="pl-pds">"</span>test_doc<span class="pl-pds">"</span></span>);
+ost<span class="pl-k">.</span>setContains(<span class="pl-smi">VersionType</span><span class="pl-c1"><span class="pl-k">.</span>SINGLE_VERSION</span>);</pre></div>
 
 <p>Add a <code>meta</code> element to hold the documents metadata :</p>
 
-<div class="highlight highlight-java"><pre><span class="c1">// create the meta element</span>
-<span class="n">Meta</span> <span class="n">meta</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Meta</span><span class="o">();</span>
-</pre></div>
+<div class="highlight highlight-java"><pre><span class="pl-c">// create the meta element</span>
+<span class="pl-smi">Meta</span> meta <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">Meta</span>();</pre></div>
 
 <p>Add a <code>publication</code> within the <code>meta</code> element:</p>
 
-<div class="highlight highlight-java"><pre><span class="c1">// create the publication tag</span>
-<span class="n">Publication</span> <span class="n">pub</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Publication</span><span class="o">();</span>
-<span class="n">pub</span><span class="o">.</span><span class="na">setCurrentId</span><span class="o">(</span><span class="s">"test_pub"</span><span class="o">);</span>
-<span class="n">pub</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"pub"</span><span class="o">);</span>
-<span class="n">pub</span><span class="o">.</span><span class="na">setDate</span><span class="o">(</span><span class="s">"2013-01-01"</span><span class="o">);</span>
-<span class="n">pub</span><span class="o">.</span><span class="na">setNumber</span><span class="o">(</span><span class="s">"42"</span><span class="o">);</span>
-<span class="c1">// add the publication element to the meta element</span>
-<span class="n">meta</span><span class="o">.</span><span class="na">setPublication</span><span class="o">(</span><span class="n">pub</span><span class="o">);</span>
-</pre></div>
+<div class="highlight highlight-java"><pre><span class="pl-c">// create the publication tag</span>
+<span class="pl-smi">Publication</span> pub <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">Publication</span>();
+pub<span class="pl-k">.</span>setCurrentId(<span class="pl-s"><span class="pl-pds">"</span>test_pub<span class="pl-pds">"</span></span>);
+pub<span class="pl-k">.</span>setName(<span class="pl-s"><span class="pl-pds">"</span>pub<span class="pl-pds">"</span></span>);
+pub<span class="pl-k">.</span>setDate(<span class="pl-s"><span class="pl-pds">"</span>2013-01-01<span class="pl-pds">"</span></span>);
+pub<span class="pl-k">.</span>setNumber(<span class="pl-s"><span class="pl-pds">"</span>42<span class="pl-pds">"</span></span>);
+<span class="pl-c">// add the publication element to the meta element</span>
+meta<span class="pl-k">.</span>setPublication(pub);</pre></div>
 
 <p>Now create the <code>identification</code> element in meta :</p>
 
-<div class="highlight highlight-java"><pre><span class="c1">//create the identification element</span>
-<span class="n">Identification</span> <span class="n">idf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Identification</span><span class="o">();</span>
-<span class="n">idf</span><span class="o">.</span><span class="na">setSource</span><span class="o">(</span><span class="s">"#a_source"</span><span class="o">);</span>
-</pre></div>
+<div class="highlight highlight-java"><pre><span class="pl-c">//create the identification element</span>
+<span class="pl-smi">Identification</span> idf <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">Identification</span>();
+idf<span class="pl-k">.</span>setSource(<span class="pl-s"><span class="pl-pds">"</span>#a_source<span class="pl-pds">"</span></span>);</pre></div>
 
 <p>Create the <code>FRBRWork</code> element and its child elements :</p>
 
-<div class="highlight highlight-java"><pre><span class="c1">//create a work element</span>
-<span class="n">FRBRWork</span> <span class="n">work</span> <span class="o">=</span> <span class="n">of</span><span class="o">.</span><span class="na">createFRBRWork</span><span class="o">();</span>
-<span class="c1">//set FRBRthis on work</span>
-<span class="n">ValueType</span> <span class="n">vThis</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ValueType</span><span class="o">();</span>
-<span class="n">vThis</span><span class="o">.</span><span class="na">setValue</span><span class="o">(</span><span class="s">"/ak/bill/2013-01-01/A1/memorandum"</span><span class="o">);</span>
-<span class="n">work</span><span class="o">.</span><span class="na">setFRBRthis</span><span class="o">(</span><span class="n">vThis</span><span class="o">);</span>
-<span class="c1">//set FRBRuri on work</span>
-<span class="n">ValueType</span> <span class="n">vURI</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ValueType</span><span class="o">();</span>
-<span class="n">vURI</span><span class="o">.</span><span class="na">setValue</span><span class="o">(</span><span class="s">"/ak/bill/2013-01-01/A1"</span><span class="o">);</span>
-<span class="n">work</span><span class="o">.</span><span class="na">getFRBRuri</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="n">vURI</span><span class="o">);</span>
-<span class="c1">//add the identification to the work</span>
-<span class="n">idf</span><span class="o">.</span><span class="na">setFRBRWork</span><span class="o">(</span><span class="n">work</span><span class="o">);</span>
-</pre></div>
+<div class="highlight highlight-java"><pre><span class="pl-c">//create a work element</span>
+<span class="pl-smi">FRBRWork</span> work <span class="pl-k">=</span> of<span class="pl-k">.</span>createFRBRWork();
+<span class="pl-c">//set FRBRthis on work</span>
+<span class="pl-smi">ValueType</span> vThis <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">ValueType</span>();
+vThis<span class="pl-k">.</span>setValue(<span class="pl-s"><span class="pl-pds">"</span>/ak/bill/2013-01-01/A1/memorandum<span class="pl-pds">"</span></span>);
+work<span class="pl-k">.</span>setFRBRthis(vThis);
+<span class="pl-c">//set FRBRuri on work</span>
+<span class="pl-smi">ValueType</span> vURI <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">ValueType</span>();
+vURI<span class="pl-k">.</span>setValue(<span class="pl-s"><span class="pl-pds">"</span>/ak/bill/2013-01-01/A1<span class="pl-pds">"</span></span>);
+work<span class="pl-k">.</span>getFRBRuri()<span class="pl-k">.</span>add(vURI);
+<span class="pl-c">//add the identification to the work</span>
+idf<span class="pl-k">.</span>setFRBRWork(work);</pre></div>
 
 <p>Add the <code>identification</code> element to the <code>meta</code> element ; and the <code>meta</code> to the document :</p>
 
-<div class="highlight highlight-java"><pre><span class="c1">//add the identifcatin on the meta</span>
-<span class="n">meta</span><span class="o">.</span><span class="na">setIdentification</span><span class="o">(</span><span class="n">idf</span><span class="o">);</span>
-<span class="c1">//add the meta </span>
-<span class="n">ost</span><span class="o">.</span><span class="na">setMeta</span><span class="o">(</span><span class="n">meta</span><span class="o">);</span>
-<span class="c1">//add the doc type to the akomaNtoso element</span>
-<span class="n">anType</span><span class="o">.</span><span class="na">setDoc</span><span class="o">(</span><span class="n">ost</span><span class="o">);</span>
-<span class="n">marshaller</span><span class="o">.</span><span class="na">marshal</span><span class="o">(</span><span class="n">rootElem</span><span class="o">,</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">);</span>
-</pre></div>
+<div class="highlight highlight-java"><pre><span class="pl-c">//add the identifcatin on the meta</span>
+meta<span class="pl-k">.</span>setIdentification(idf);
+<span class="pl-c">//add the meta </span>
+ost<span class="pl-k">.</span>setMeta(meta);
+<span class="pl-c">//add the doc type to the akomaNtoso element</span>
+anType<span class="pl-k">.</span>setDoc(ost);
+marshaller<span class="pl-k">.</span>marshal(rootElem, <span class="pl-smi">System</span><span class="pl-k">.</span>out);</pre></div>
 
 <p>The above code outputs an Akoma Ntoso document:</p>
 
-<div class="highlight highlight-xml"><pre><span class="cp">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;</span>
-<span class="nt">&lt;akomaNtoso</span> 
-  <span class="na">xmlns=</span><span class="s">"http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD06"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;doc</span> <span class="na">contains=</span><span class="s">"singleVersion"</span> <span class="na">name=</span><span class="s">"test_doc"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta&gt;</span>
-      <span class="nt">&lt;identification</span> <span class="na">source=</span><span class="s">"#a_source"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;FRBRWork&gt;</span>
-          <span class="nt">&lt;FRBRthis</span> <span class="na">value=</span><span class="s">"/ak/bill/2013-01-01/A1/memorandum"</span><span class="nt">/&gt;</span>
-          <span class="nt">&lt;FRBRuri</span> <span class="na">value=</span><span class="s">"/ak/bill/2013-01-01/A1"</span><span class="nt">/&gt;</span>
-        <span class="nt">&lt;/FRBRWork&gt;</span>
-      <span class="nt">&lt;/identification&gt;</span>
-      <span class="nt">&lt;publication</span> <span class="na">date=</span><span class="s">"2013-01-01"</span> <span class="na">number=</span><span class="s">"42"</span> <span class="na">name=</span><span class="s">"pub"</span> 
-          <span class="na">currentId=</span><span class="s">"test_pub"</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;/meta&gt;</span>
-  <span class="nt">&lt;/doc&gt;</span>
-<span class="nt">&lt;/akomaNtoso&gt;</span>
-</pre></div>
+<div class="highlight highlight-xml"><pre>&lt;?<span class="pl-ent">xml</span><span class="pl-e"> version</span>=<span class="pl-s"><span class="pl-pds">"</span>1.0<span class="pl-pds">"</span></span><span class="pl-e"> encoding</span>=<span class="pl-s"><span class="pl-pds">"</span>UTF-8<span class="pl-pds">"</span></span><span class="pl-e"> standalone</span>=<span class="pl-s"><span class="pl-pds">"</span>yes<span class="pl-pds">"</span></span>?&gt;
+&lt;<span class="pl-ent">akomaNtoso</span> 
+  <span class="pl-e">xmlns</span>=<span class="pl-s"><span class="pl-pds">"</span>http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD06<span class="pl-pds">"</span></span>&gt;
+  &lt;<span class="pl-ent">doc</span> <span class="pl-e">contains</span>=<span class="pl-s"><span class="pl-pds">"</span>singleVersion<span class="pl-pds">"</span></span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>test_doc<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">meta</span>&gt;
+      &lt;<span class="pl-ent">identification</span> <span class="pl-e">source</span>=<span class="pl-s"><span class="pl-pds">"</span>#a_source<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">FRBRWork</span>&gt;
+          &lt;<span class="pl-ent">FRBRthis</span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">"</span>/ak/bill/2013-01-01/A1/memorandum<span class="pl-pds">"</span></span>/&gt;
+          &lt;<span class="pl-ent">FRBRuri</span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">"</span>/ak/bill/2013-01-01/A1<span class="pl-pds">"</span></span>/&gt;
+        &lt;/<span class="pl-ent">FRBRWork</span>&gt;
+      &lt;/<span class="pl-ent">identification</span>&gt;
+      &lt;<span class="pl-ent">publication</span> <span class="pl-e">date</span>=<span class="pl-s"><span class="pl-pds">"</span>2013-01-01<span class="pl-pds">"</span></span> <span class="pl-e">number</span>=<span class="pl-s"><span class="pl-pds">"</span>42<span class="pl-pds">"</span></span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>pub<span class="pl-pds">"</span></span> 
+          <span class="pl-e">currentId</span>=<span class="pl-s"><span class="pl-pds">"</span>test_pub<span class="pl-pds">"</span></span>/&gt;
+    &lt;/<span class="pl-ent">meta</span>&gt;
+  &lt;/<span class="pl-ent">doc</span>&gt;
+&lt;/<span class="pl-ent">akomaNtoso</span>&gt;</pre></div>
 
 <h3>
-<a name="parsing-an-akoma-ntoso-xml-document-and-loading-it-as-an-object" class="anchor" href="#parsing-an-akoma-ntoso-xml-document-and-loading-it-as-an-object"><span class="octicon octicon-link"></span></a>Parsing an Akoma Ntoso XML document, and loading it as an Object</h3>
+<a id="parsing-an-akoma-ntoso-xml-document-and-loading-it-as-an-object" class="anchor" href="#parsing-an-akoma-ntoso-xml-document-and-loading-it-as-an-object" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parsing an Akoma Ntoso XML document, and loading it as an Object</h3>
 
 <p>First specify the version:</p>
 
-<div class="highlight highlight-java"><pre> <span class="n">AnVersion</span> <span class="n">_version</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AnVersion</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="s">"CSD07"</span><span class="o">);</span>
-</pre></div>
+<div class="highlight highlight-java"><pre> <span class="pl-smi">AnVersion</span> _version <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">AnVersion</span>(<span class="pl-c1">3</span>, <span class="pl-s"><span class="pl-pds">"</span>CSD07<span class="pl-pds">"</span></span>);</pre></div>
 
 <p>Currently, all Akoma Ntoso versions upto the CSD10 release are supported.</p>
 
 <p>Next, specify the file you want to load:</p>
 
-<div class="highlight highlight-java"><pre> <span class="c1">// file to parse and discover type</span>
- <span class="n">File</span> <span class="n">_parse</span>  <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"./src/test/java/testdocs/akomantoso_doc_csd07.xml"</span><span class="o">);</span>    
-</pre></div>
+<div class="highlight highlight-java"><pre> <span class="pl-c">// file to parse and discover type</span>
+ <span class="pl-smi">File</span> _parse  <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">File</span>(<span class="pl-s"><span class="pl-pds">"</span>./src/test/java/testdocs/akomantoso_doc_csd07.xml<span class="pl-pds">"</span></span>);    </pre></div>
 
 <p>This can also be an <code>InputStream</code>, <code>Reader</code> or <code>URI</code>.</p>
 
 <p>Now call the <code>parse()</code> api:</p>
 
-<div class="highlight highlight-java"><pre><span class="n">AnDocType</span> <span class="n">resultDoc</span> <span class="o">=</span> <span class="n">AnParser</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">_version</span><span class="o">,</span> <span class="n">_parse</span><span class="o">);</span>
-</pre></div>
+<div class="highlight highlight-java"><pre><span class="pl-smi">AnDocType</span> resultDoc <span class="pl-k">=</span> <span class="pl-smi">AnParser</span><span class="pl-k">.</span>parse(_version, _parse);</pre></div>
 
 <p>This will return a <code>AnDocType</code> object containing:</p>
 
@@ -189,44 +176,43 @@ Use the following metadata information in your pom.xml file :</p>
 </li>
 <li>
 <code>objClass</code> - this is the full class name of the type in objType.</li>
-</ul><p>Via, the returned <code>objType</code> you can access all the methods of the returned document type.</p>
+</ul>
+
+<p>Via, the returned <code>objType</code> you can access all the methods of the returned document type.</p>
 
 <h3>
-<a name="loading-an-xml-document-and-modifying-it-with-the-api" class="anchor" href="#loading-an-xml-document-and-modifying-it-with-the-api"><span class="octicon octicon-link"></span></a>Loading an XML document, and modifying it with the API</h3>
+<a id="loading-an-xml-document-and-modifying-it-with-the-api" class="anchor" href="#loading-an-xml-document-and-modifying-it-with-the-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loading an XML document, and modifying it with the API</h3>
 
 <p>This is a more involved way of doing the same as was described in the previous section. 
 Here you need to explicitly call getAct() / getBill() / getDebate() as the case may be to access the actual document type information.</p>
 
 <p>The following loads an Akoma Ntoso document, and makes it accessible as a Java object: </p>
 
-<div class="highlight highlight-java"><pre><span class="c1">// load the context for the specific AKoma Ntoso version you want to use,</span>
-<span class="c1">// here we use the 3.0-csd06 version</span>
-<span class="c1">// open a Akoma Ntoso file</span>
-<span class="n">File</span> <span class="n">_anDoc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"/path/to/akomantoso_doc.xml"</span><span class="o">);</span>
-<span class="c1">// use version 3 csd06</span>
-<span class="n">AnVersion</span> <span class="n">vSchema</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AnVersion</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="s">"CSD06"</span><span class="o">);</span>
-<span class="n">JAXBContext</span> <span class="n">cxt</span> <span class="o">=</span> <span class="n">vSchema</span><span class="o">.</span><span class="na">getContext</span><span class="o">();</span>
-<span class="n">Unmarshaller</span> <span class="n">unmarshaller</span> <span class="o">=</span> <span class="n">cxt</span><span class="o">.</span><span class="na">createUnmarshaller</span><span class="o">();</span>
-<span class="n">JAXBElement</span><span class="o">&lt;</span><span class="n">AkomaNtosoType</span><span class="o">&gt;</span> <span class="n">anType</span> <span class="o">=</span> 
-    <span class="o">(</span><span class="n">JAXBElement</span><span class="o">&lt;</span><span class="n">AkomaNtosoType</span><span class="o">&gt;)</span><span class="n">unmarshaller</span><span class="o">.</span><span class="na">unmarshal</span><span class="o">(</span><span class="n">_anDoc</span><span class="o">);</span>
-</pre></div>
+<div class="highlight highlight-java"><pre><span class="pl-c">// load the context for the specific AKoma Ntoso version you want to use,</span>
+<span class="pl-c">// here we use the 3.0-csd06 version</span>
+<span class="pl-c">// open a Akoma Ntoso file</span>
+<span class="pl-smi">File</span> _anDoc <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">File</span>(<span class="pl-s"><span class="pl-pds">"</span>/path/to/akomantoso_doc.xml<span class="pl-pds">"</span></span>);
+<span class="pl-c">// use version 3 csd06</span>
+<span class="pl-smi">AnVersion</span> vSchema <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">AnVersion</span>(<span class="pl-c1">3</span>, <span class="pl-s"><span class="pl-pds">"</span>CSD06<span class="pl-pds">"</span></span>);
+<span class="pl-smi">JAXBContext</span> cxt <span class="pl-k">=</span> vSchema<span class="pl-k">.</span>getContext();
+<span class="pl-smi">Unmarshaller</span> unmarshaller <span class="pl-k">=</span> cxt<span class="pl-k">.</span>createUnmarshaller();
+<span class="pl-k">JAXBElement&lt;<span class="pl-smi">AkomaNtosoType</span>&gt;</span> anType <span class="pl-k">=</span> 
+    (<span class="pl-k">JAXBElement&lt;<span class="pl-smi">AkomaNtosoType</span>&gt;</span>)unmarshaller<span class="pl-k">.</span>unmarshal(_anDoc);</pre></div>
 
 <p>After unmarshalling, the document is available for reading &amp; modification via the API : </p>
 
-<div class="highlight highlight-java"><pre><span class="n">AkomaNtosoType</span> <span class="n">anDoc</span>  <span class="o">=</span> <span class="n">anType</span><span class="o">.</span><span class="na">getValue</span><span class="o">();</span>
-<span class="n">String</span> <span class="n">aName</span> <span class="o">=</span> <span class="n">anDoc</span><span class="o">.</span><span class="na">getDoc</span><span class="o">().</span><span class="na">getName</span><span class="o">();</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">" doc name = "</span> <span class="o">+</span> <span class="n">aName</span><span class="o">);</span>
-<span class="n">VersionType</span> <span class="n">vType</span> <span class="o">=</span> <span class="n">anDoc</span><span class="o">.</span><span class="na">getDoc</span><span class="o">().</span><span class="na">getContains</span><span class="o">();</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">" doc contains = "</span> <span class="o">+</span> <span class="n">vType</span><span class="o">.</span><span class="na">getValue</span><span class="o">());</span>
-</pre></div>
+<div class="highlight highlight-java"><pre><span class="pl-smi">AkomaNtosoType</span> anDoc  <span class="pl-k">=</span> anType<span class="pl-k">.</span>getValue();
+<span class="pl-smi">String</span> aName <span class="pl-k">=</span> anDoc<span class="pl-k">.</span>getDoc()<span class="pl-k">.</span>getName();
+<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(<span class="pl-s"><span class="pl-pds">"</span> doc name = <span class="pl-pds">"</span></span> <span class="pl-k">+</span> aName);
+<span class="pl-smi">VersionType</span> vType <span class="pl-k">=</span> anDoc<span class="pl-k">.</span>getDoc()<span class="pl-k">.</span>getContains();
+<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(<span class="pl-s"><span class="pl-pds">"</span> doc contains = <span class="pl-pds">"</span></span> <span class="pl-k">+</span> vType<span class="pl-k">.</span>getValue());</pre></div>
 
 <p>If the imported document looked like this :</p>
 
-<div class="highlight highlight-xml"><pre><span class="nt">&lt;akomaNtoso</span> 
- <span class="na">xmlns=</span><span class="s">"http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD06"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;doc</span> <span class="na">name=</span><span class="s">"memorandum"</span> <span class="na">contains=</span><span class="s">"originalVersion"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;meta&gt;</span>
-</pre></div>
+<div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">akomaNtoso</span> 
+ <span class="pl-e">xmlns</span>=<span class="pl-s"><span class="pl-pds">"</span>http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD06<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">doc</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>memorandum<span class="pl-pds">"</span></span> <span class="pl-e">contains</span>=<span class="pl-s"><span class="pl-pds">"</span>originalVersion<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">meta</span>&gt;</pre></div>
 
 <p>The java code above will output :</p>
 
@@ -235,7 +221,7 @@ doc contains = originalVersion
 </code></pre>
 
 <h2>
-<a name="building-from-source" class="anchor" href="#building-from-source"><span class="octicon octicon-link"></span></a>Building from Source</h2>
+<a id="building-from-source" class="anchor" href="#building-from-source" aria-hidden="true"><span class="octicon octicon-link"></span></a>Building from Source</h2>
 
 <p>The library is built using maven, to build from source :</p>
 
@@ -244,12 +230,12 @@ mvn package
 </code></pre>
 
 <h2>
-<a name="Javadoc" class="anchor" href="#javadoc"><span class="octicon octicon-link"></span></a>Javadoc</h2>
+<a id="javadoc" class="anchor" href="#javadoc" aria-hidden="true"><span class="octicon octicon-link"></span></a>Javadoc</h2>
 
 <p>Current Javadoc for the library can be located <a href="./javadoc/1.0.13/index.html">here</a>.</p>
 
 <h2>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p>Licensed using the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache 2.0 license</a></p>
       </section>
@@ -259,7 +245,7 @@ mvn package
     <div id="footer_wrap" class="outer">
       <footer class="inner">
         <p class="copyright">akomantoso-lib maintained by <a href="https://github.com/kohsah">kohsah</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
 
