@@ -93,7 +93,8 @@ public final class AnVersion {
      */
     public JAXBContext getContext() throws JAXBException{
         String sPackage = getPackageForVersion();
-        return JAXBContext.newInstance(sPackage);
+        JAXBContext cxt = JAXBContext.newInstance(sPackage);
+        return cxt;
     }
     
     /**

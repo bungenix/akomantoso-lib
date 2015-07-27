@@ -28,6 +28,7 @@ public class AnTypeGetterHelper {
     
     private static Logger logger = LoggerFactory.getLogger(AnTypeGetterHelper.class);
     
+    public AnTypeGetterHelper() {}
     /**
      * Stores the name of the doc type and its corresponding accessor method
      */
@@ -66,7 +67,7 @@ public class AnTypeGetterHelper {
      * @param anMethod
      * @return 
      */
-    private static Method getMethod(Object anType, String anMethod){
+    private Method getMethod(Object anType, String anMethod){
         Method typeMethod = null;
         try {
             typeMethod = anType.getClass().getMethod(anMethod, (Class<?>[]) null);
@@ -86,7 +87,7 @@ public class AnTypeGetterHelper {
      * element type, and the second is the output object from getBill(), getAct() etc as 
      * it may resolve to.
      */
-    public static Object[] getDocType(Object anType) {
+    public Object[] getDocType(Object anType) {
         Object[] retArr = null;
         // first we need to invoke getValue() on the unmarsshaled object 
         

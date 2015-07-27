@@ -36,7 +36,7 @@
 					<FRBRdate date="2012-10-21" name="generation"/>
 					<FRBRauthor href="#somebody" as="#editor"/>
 					<componentInfo>
-						<componentData wId="X" currentId="mmain" href="main.xml" name="main" showAs="Main document"/>
+						<componentData currentId="mmain" href="main.xml" name="main" showAs="Main document"/>
 						<componentData currentId="mschedule" href="schedule.xml" name="schedule" showAs="SCHEDULE"/>
 					</componentInfo>
 				</FRBRManifestation>

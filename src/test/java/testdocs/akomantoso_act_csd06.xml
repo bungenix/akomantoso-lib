@@ -14,7 +14,7 @@
 					<FRBRdate date="1989-12-06" name="generation"/>
 					<FRBRauthor href="#parliament" as="#author"/>
 					<componentInfo>
-						<componentData wId="X" currentId="wmain"  href="#emain" name="main" showAs="Main document"/>
+						<componentData currentId="wmain"  href="#emain" name="main" showAs="Main document"/>
 					</componentInfo>
 					<FRBRcountry value="ke"/>
 				</FRBRWork>

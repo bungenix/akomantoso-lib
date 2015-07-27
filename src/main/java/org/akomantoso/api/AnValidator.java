@@ -51,7 +51,7 @@ public class AnValidator {
      * @return
      * @throws SAXException 
      */
-    public static AnValidatorError validate(AnVersion version, Reader reader) throws SAXException {
+    public AnValidatorError validate(AnVersion version, Reader reader) throws SAXException {
         Source readerSource = new StreamSource(reader);
         return validate(version, readerSource);
     }
@@ -64,7 +64,7 @@ public class AnValidator {
      * @return
      * @throws SAXException 
      */    
-    public static AnValidatorError validate(AnVersion version, InputStream iStream) throws SAXException {
+    public AnValidatorError validate(AnVersion version, InputStream iStream) throws SAXException {
         Source streamSource = new StreamSource(iStream);
         return validate(version, streamSource);
     }   
@@ -77,7 +77,7 @@ public class AnValidator {
      * @return
      * @throws SAXException 
      */
-    public static AnValidatorError validate(AnVersion version, URI uri) throws SAXException {
+    public AnValidatorError validate(AnVersion version, URI uri) throws SAXException {
         Source uriSource = new StreamSource(uri.toASCIIString());
         return validate(version, uriSource);
     }   
@@ -89,7 +89,8 @@ public class AnValidator {
      * @param ftoValidate a file handle to the file to be validated
      * @return
      * @throws SAXException 
-     */    public static AnValidatorError validate(AnVersion version, File ftoValidate) throws SAXException {
+     */    
+     public AnValidatorError validate(AnVersion version, File ftoValidate) throws SAXException {
         Source fileSource = new StreamSource(ftoValidate);
         return validate(version, fileSource);
     }
@@ -102,7 +103,7 @@ public class AnValidator {
     * @return
     * @throws SAXException 
     */
-    public static AnValidatorError validate(AnVersion version, Source sSource) throws SAXException {
+    public AnValidatorError validate(AnVersion version, Source sSource) throws SAXException {
         AnValidatorError err = new AnValidatorError();
         Source schemaSource = new StreamSource(version.getSchemaForVersion());
         SchemaFactory schemaFactory = SchemaFactory.newInstance(

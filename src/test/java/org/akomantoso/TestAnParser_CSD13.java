@@ -39,7 +39,7 @@ public class TestAnParser_CSD13 extends TestCase {
     public void testParse() throws Exception {
         System.out.println("parse");
         // file 1 should validate
-        AnDocType resultDoc = AnParser.parse(_version, _parse);
+        AnDocType resultDoc = (new AnParser()).parse(_version, _parse);
         assertEquals(resultDoc.objClass, 
                 "org.akomantoso.schema.v3.csd13.OpenStructure");
         assertEquals(resultDoc.typeName, 
