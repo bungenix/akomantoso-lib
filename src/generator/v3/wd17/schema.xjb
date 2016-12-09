@@ -5,7 +5,7 @@
     schemaLocation="schema.xsd">
     <jaxb:globalBindings generateMixedExtensions="true"/>
    <jaxb:schemaBindings>
-      <jaxb:package name="org.akomantoso.schema.v3.csd13"/>
+      <jaxb:package name="org.akomantoso.schema.v3.wd17"/>
     </jaxb:schemaBindings>
  
     <!-- rename the value element -->
