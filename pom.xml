@@ -20,7 +20,7 @@
   <groupId>io.github.kohsah</groupId>
   <artifactId>akomantoso-lib</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.14-SNAPSHOT</version>
+  <version>1.0.15-SNAPSHOT</version>
   <name>akomantoso-lib</name>
   <url>https://github.com/kohsah/akomantoso-lib</url>
   <description>This is a java class representation of the Akoma Ntoso XML schema. 
@@ -42,7 +42,7 @@
   </licenses>
   
   <properties>
-    <jdk.version>1.6</jdk.version>
+    <jdk.version>1.8</jdk.version>
     <maven-deploy-plugin.version>2.8.1</maven-deploy-plugin.version>
     <maven-release-plugin.version>2.5</maven-release-plugin.version>
     <maven-source-plugin.version>2.2.1</maven-source-plugin.version>
