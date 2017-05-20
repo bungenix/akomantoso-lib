@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 ../../../main/java/org/oasis_open/docs/legaldocml/ns/akn/_3_0/release/schema.xsd"
+            xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+    <doc name="memorandum" contains="originalVersion">
+        <meta>
+            <identification source="#somebody">
+                <FRBRWork>
+                    <FRBRthis value="/ak/bill/2010-07-10/B24/memorandum"/>
+                    <FRBRuri value="/ak/bill/2010-07-10/B24"/>
+                    <FRBRdate date="2010-07-10" name="Enactment"/>
+                    <FRBRauthor href="#parliament" as="#author"/>
+                    <componentInfo>
+                        <componentData wId="wmain" href="#emain" name="main" showAs="Main document"/>
+                        <componentData wId="wmemorandum" href="#ememorandum" name="memorandum" showAs="Memorandum on the objects of the higher education laws amendment bill, 2010"/>
+                    </componentInfo>
+                    <FRBRcountry value="ak"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/ak/bill/2010-07-10/B24/eng@/memorandum"/>
+                    <FRBRuri value="/ak/bill/2010-07-10/B24/eng@"/>
+                    <FRBRdate date="2010-11-24" name="Expression"/>
+                    <FRBRauthor href="#somebody" as="#editor"/>
+                    <componentInfo>
+                        <componentData eId="emain" href="#mmain" name="main" showAs="Main document"/>
+                        <componentData eId="ememorandum" href="#mmemorandum" name="memorandum" showAs="Memorandum on the objects of the higher education laws amendment bill, 2010"/>
+                    </componentInfo>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/ak/bill/2010-07-10/B24/eng@/memorandum.xml"/>
+                    <FRBRuri value="/ak/bill/2010-07-10/B24/eng@/main.akn"/>
+                    <FRBRdate date="2010-11-24" name="XMLConversion"/>
+                    <FRBRauthor href="#somebody" as="#editor"/>
+                    <componentInfo>
+                        <componentData wId="mmain" href="main.xml" name="main" showAs="Main document"/>
+                        <componentData wId="mmemorandum" href="memorandum.xml" name="memorandum" showAs="Memorandum on the objects of the higher education laws amendment bill, 2010"/>
+                    </componentInfo>
+                </FRBRManifestation>
+            </identification>
+            <publication blah="X" date="2010-07-19" showAs="Bungeni Gazette" name="BG" number="777"/>
+            <classification source="#main">
+                <keyword value="education" showAs="Education" dictionary="/eurovoc/passo1/passo2/voce4"/>
+            </classification>
+            <lifecycle source="#somebody">
+                <eventRef date="2010-07-19" wId="e1" source="#ro1" type="generation"/>
+            </lifecycle>
+            <references source="#somebody">
+                <original wId="ro1" href="/ak/bill/2010-07-10/B24/eng@/memorandum" showAs="Original"/>
+                <activeRef wId="ra1" href="/ak/act/2000-10-10/101/main" showAs="Higher Education Act"/>
+                <attachmentOf wId="memorandum" href="/ak/bill/2010-07-10/B24/eng@/main" showAs=" Higher Education Laws Amendment Bill"/>
+                <TLCOrganization wId="parliament" href="/ontology/organizations/akn/parliament" showAs="Parliament"/>
+                <TLCPerson wId="somebody" href="akn.user.somebody.1950-02-28" showAs="somebody"/>
+                <TLCRole wId="author" href="/ontology/roles/akn/author" showAs="Author of Document"/>
+                <TLCRole wId="editor" href="/ontology/roles/akn/editor" showAs="Editor of Document"/>
+            </references>
+        </meta>
+        <preface>
+            <p>
+                <docTitle>MEMORANDUM ON THE OBJECTS OF THE HIGHER EDUCATION
+                    LAWS AMENDMENT BILL, 2010 </docTitle>
+            </p>
+        </preface>
+        <mainBody>
+            <blockList wId="lst1">
+                <item wId="lst1-itm1">
+                    <num>1.</num>
+                    <heading wId="itm1-hdng1">MAIN OBJECT OF BILL</heading>
+                    <blockList wId="lst1-itm1-lst1">
+                        <item wId="lst1-itm1-lst1-itm11">
+                            <p>
+                                The main object of the Bill is to align the laws listed in subparagraph 1.2 with
+                                the new education dispensation that came about during 2009 when the former
+                                Department of Education was split into the Department of Basic Education
+                                and the Department of Higher Education and Training. In terms of section 97
+                                of the Constitution of the Republic of Bungeni, 1996, the administration
+                                and powers and functions entrusted by the laws listed in subparagraph 1.2
+                                were transferred to the Minister of Higher Education and Training by means
+                                of Proclamation No. 44 of 2009, published in Government Gazette No. 32367
+                                of 1 July 2009. The administration and powers and functions entrusted to the
+                                Minister of Labour by certain provisions of the Skill Development Act, 2002
+                                (Act No. 7 of 2002) (the SD Act), were similarly transferred to the Minister of
+                                Higher Education and Training by Proclamation No. 56 of 2009, published in
+                                Government Gazette No. 32549 of 4 September 2009. The Bill also seeks to
+                                align those provisions of the SD Act with the new education dispensation
+                                referred to above.</p>
+                        </item>
+                    </blockList>
+                </item>
+            </blockList>
+        </mainBody>
+    </doc>
+</akomaNtoso>
