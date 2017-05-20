@@ -4,7 +4,6 @@
             targetNamespace="http://docs.oasis-open.org/legaldocml/ns/akn/3.0"
             elementFormDefault="qualified">
 
-
 	  <xsd:import namespace="http://www.w3.org/XML/1998/namespace"
                schemaLocation="./xml.xsd"/>
 

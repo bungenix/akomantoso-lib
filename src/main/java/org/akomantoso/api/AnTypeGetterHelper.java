@@ -48,8 +48,8 @@ public class AnTypeGetterHelper {
      */
     private static final AnTypeMethod[] anTypeMethods = {
         new AnTypeMethod("act", "getAct"),
-        new AnTypeMethod("amendment", "getAmendent"),
-        new AnTypeMethod("amendmentList", "getAmendentList"),
+        new AnTypeMethod("amendment", "getAmendment"),
+        new AnTypeMethod("amendmentList", "getAmendmentList"),
         new AnTypeMethod("bill", "getBill"),
         new AnTypeMethod("debate", "getDebate"),
         new AnTypeMethod("debateReport", "getDebateReport"),

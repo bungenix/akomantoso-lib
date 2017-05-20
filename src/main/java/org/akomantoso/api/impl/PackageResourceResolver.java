@@ -2,6 +2,9 @@ package org.akomantoso.api.impl;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.ls.LSInput;
 import org.w3c.dom.ls.LSResourceResolver;
 
@@ -13,6 +16,7 @@ import org.w3c.dom.ls.LSResourceResolver;
  * @author Ashok Hariharan
  */
 public class PackageResourceResolver implements LSResourceResolver {
+    private static Logger logger = LoggerFactory.getLogger(PackageResourceResolver.class);
 
     public static final String RESOURCE_PREFIX = 
             "/" + PackageResourceResolver.class.getPackage().getName().replace(".", "/");
@@ -20,6 +24,7 @@ public class PackageResourceResolver implements LSResourceResolver {
     @Override
     public LSInput resolveResource(String type, String namespaceURI, String publicId, String systemId, String baseURI) {
         LSInputImpl impl = new LSInputImpl();
+        logger.info("resolveResource :" + RESOURCE_PREFIX + "/" + systemId);
         // systemId 
         InputStream in = getClass().getResourceAsStream(RESOURCE_PREFIX + "/" + systemId);
         InputStreamReader inr = new InputStreamReader(in);

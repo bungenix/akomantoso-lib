@@ -109,11 +109,12 @@ public class AnValidator {
         SchemaFactory schemaFactory = SchemaFactory.newInstance(
                 XMLConstants.W3C_XML_SCHEMA_NS_URI
                 );
+        try {
         // to resolve things like xml.xsd
         schemaFactory.setResourceResolver(new PackageResourceResolver());
         final Schema schema = schemaFactory.newSchema(schemaSource);
         final Validator validator = schema.newValidator();
-        try {
+
             validator.validate(sSource);
         } catch (IOException e) {
             logger.error("IO error during validation", e);
