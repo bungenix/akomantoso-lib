@@ -1,9 +1,4 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>9</version>
-    </parent>
 
     <distributionManagement>
         <!-- snapshot repo did not work correctly, reverting to using staging repo -->
@@ -13,9 +8,10 @@
         </snapshotRepository>
         <repository>
             <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
+
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.kohsah</groupId>
     <artifactId>akomantoso-lib</artifactId>
@@ -76,52 +72,16 @@
     </dependencies>
 
     <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-deploy-plugin</artifactId>
-                    <version>${maven-deploy-plugin.version}</version>
-                </plugin>
-
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-release-plugin</artifactId>
-                    <version>${maven-release-plugin.version}</version>
-                    <configuration>
-                        <autoVersionSubmodules>true</autoVersionSubmodules>
-                        <useReleaseProfile>false</useReleaseProfile>
-                        <releaseProfiles>release</releaseProfiles>
-                        <goals>deploy</goals>
-                        <checkModificationExcludes>
-                            <checkModificationExclude>pom.xml</checkModificationExclude>
-                        </checkModificationExcludes>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
-                <configuration>
-                    <source>${jdk.version}</source>
-                    <target>${jdk.version}</target>
-                </configuration>
-            </plugin>
-            <!-- for staging on sonatype nexus -->
-            <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.8</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <serverId>ossrh</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                </configuration>
-            </plugin>
+<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.6.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
         </plugins>
         <resources>
             <resource>
@@ -138,84 +98,77 @@
             <id>release</id>
             <build>
                 <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <version>${maven-source-plugin.version}</version>
-                        <executions>
-                            <execution>
-                                <id>attach-sources</id>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                                <configuration>
-                                    <archive>
-                                        <manifest>
-                                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-                                            <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-                                        </manifest>
-                                        <manifestEntries>
-                                            <Implementation-Build>${implementation.build}</Implementation-Build>
-                                            <Implementation-Build-Date>${maven.build.timestamp}</Implementation-Build-Date>
-                                            <X-Compile-Source-JDK>${jdk.version}</X-Compile-Source-JDK>
-                                            <X-Compile-Target-JDK>${jdk.version}</X-Compile-Target-JDK>
-                                        </manifestEntries>
-                                    </archive>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-<!--
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>${maven-javadoc-plugin.version}</version>
-                        <executions>
-                            <execution>
-                                <id>attach-javadocs</id>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                                <configuration>
-                                    <quiet>true</quiet>
-                                    <archive>
-                                        <manifest>
-                                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-                                            <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-                                        </manifest>
-                                        <manifestEntries>
-                                            <Implementation-Build>${implementation.build}</Implementation-Build>
-                                            <Implementation-Build-Date>${maven.build.timestamp}</Implementation-Build-Date>
-                                            <X-Compile-Source-JDK>${jdk.version}</X-Compile-Source-JDK>
-                                            <X-Compile-Target-JDK>${jdk.version}</X-Compile-Target-JDK>
-                                        </manifestEntries>
-                                    </archive>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
--->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>${maven-gpg-plugin.version}</version>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>net.ju-n.maven.plugins</groupId>
-                        <artifactId>checksum-maven-plugin</artifactId>
-                        <version>${checksum-maven-plugin.version}</version>
-                    </plugin>
-                </plugins>
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-release-plugin</artifactId>
+  <version>2.5.3</version>
+  <configuration>
+    <autoVersionSubmodules>true</autoVersionSubmodules>
+    <useReleaseProfile>false</useReleaseProfile>
+    <releaseProfiles>release</releaseProfiles>
+    <goals>deploy</goals>
+  </configuration>
+</plugin>
+ <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-source-plugin</artifactId>
+      <version>2.2.1</version>
+      <executions>
+        <execution>
+          <id>attach-sources</id>
+          <goals>
+            <goal>jar-no-fork</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+ <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-javadoc-plugin</artifactId>
+<configuration>
+      <additionalparam>-Xdoclint:none</additionalparam>
+    </configuration>
+      <version>2.9.1</version>
+      <executions>
+        <execution>
+          <id>attach-javadocs</id>
+          <goals>
+            <goal>jar</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+  <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-gpg-plugin</artifactId>
+      <version>1.5</version>
+      <executions>
+        <execution>
+          <id>sign-artifacts</id>
+          <phase>verify</phase>
+          <goals>
+            <goal>sign</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+
+      </plugins>
             </build>
         </profile>
     </profiles>
+  <developers>
+    <developer>
+      <id>kohsah</id>
+      <name>Ashok Hariharan</name>
+      <email>ashok@bungeni.com</email>
+      <url>http://kohsah.github.com/akomantoso-lib/</url>
+      <organization>Bungeni Consulting LLP</organization>
+      <organizationUrl>http://www.bungeni.com</organizationUrl>
+      <roles>
+        <role>Director</role>
+      </roles>
+    </developer>
+  </developers>
+
 </project>
