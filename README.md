@@ -8,6 +8,22 @@ This is a java class representation of the Akoma Ntoso XML schema.
 
 You can find out much more about Akoma Ntoso Lib at the [project website](http://kohsah.github.io/akomantoso-lib/).
 
+
+## Building
+
+Git clone and :
+
+```
+mvn package
+```
+
+There is a separate release profile to push the library to maven central:
+
+```
+mvn clean deploy -P release
+```
+
+
 ## Resources
 
 For more information on Akoma Ntoso and ongoing work in this area, please see below. 
