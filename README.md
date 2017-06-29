@@ -2,7 +2,11 @@
 
 This is a java class representation of the Akoma Ntoso XML schema. 
 
-[Akoma Ntoso](http://www.akomtantoso.org) is an emerging legal document standard for representing legislative and judicial documents in XML format.
+[Akoma Ntoso](http://www.akomtantoso.org) is an emerging legal document standard for representing legislative and judicial documents in XML format. 
+
+The latest schema for Akoma Ntoso(AKN) can be found at [OASIS LegalDocML](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=legaldocml). I have a history of AKN Schema releases since 2006, in a [tagged github project](https://github.com/kohsah/akomantoso-release-archive). 
+
+The schema has over 200 elements, so I wrote a schema browser (which includes annotated documentation and diagrams) for AKN to make it easier to navigate: [http://schema.akomantoso.com](http://schema.akomantoso.com)
 
 ## Project Website
 
